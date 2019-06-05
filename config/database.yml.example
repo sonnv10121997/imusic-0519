@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: IMusic_development
+
+test:
+  <<: *default
+  database: IMusic_test
+
+production:
+  <<: *default
+  database: IMusic_production
+  username: IMusic
+  password: <%= ENV["IMUSIC_DATABASE_PASSWORD"] %>
