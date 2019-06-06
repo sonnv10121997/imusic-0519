@@ -25,10 +25,12 @@ build-iPhoneSimulator/
 /.bundle/
 /vendor/bundle
 /lib/bundler/man/
+.byebug_history
 
 .rvmrc
 /config/database.yml
 /config/credentials.yml.enc
 /config/storage.yml
+/config/application.yml
 /test/
 /log/
