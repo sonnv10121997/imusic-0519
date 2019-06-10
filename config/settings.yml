@@ -1,2 +1,10 @@
 application:
   title: IMusic
+track:
+  featured_list: 3
+album:
+  featured_list: 8
+category:
+  featured_list: 8
+artist:
+  featured_list: 4

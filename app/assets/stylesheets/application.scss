@@ -1,0 +1,32 @@
+@import 'bootstrap';
+@import 'modern-business';
+@import '*';
+
+.py-1rem {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.no_margin {
+  margin: 0;
+}
+
+.w-full {
+  width: 100%;
+}
+
+hr.hide_last_child:last-child {
+  display: none;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.no_border {
+  border: none;
+}
