@@ -1,1 +1,26 @@
 vi:
+  home_page:
+    index:
+      home: Trang chủ
+      categories: Chủ đề
+      artists: Nghệ sĩ
+    latest_albums:
+      title: Album mới nhất
+    featured_tracks:
+      tracks: Bài hát
+      hot: Hot
+      top: Top
+      latest: Mới nhất
+      see_more: Xem thêm
+  layouts:
+    header:
+      hot: Hot
+      top: Top
+      categories: Chủ đề
+      artists: Nghệ sĩ
+      favourites: Yêu thích
+      log_out: Đăng xuất
+      log_in: Đăng nhập
+      sign_up: Đăng kí
+    footer:
+      copyright_html: "&copy; Bản quyền thuộc về IMusic 2019"

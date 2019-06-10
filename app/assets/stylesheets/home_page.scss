@@ -1,0 +1,47 @@
+.nav-link {
+  color: white !important;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+}
+
+#navbarLogIn {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.track_info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.album_thumbnail {
+  flex: 1;
+  margin-right: 15px;
+  max-width: 100px;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+
+.track_metadata {
+  flex: 1;
+}
+
+.artist_thumbnail {
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+}
+
+img.user_x_thumbnail {
+  max-width: 26px;
+  max-height: 26px;
+  border-radius: 3px;
+}

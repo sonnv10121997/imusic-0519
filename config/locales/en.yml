@@ -1,1 +1,26 @@
 en:
+  home_page:
+    index:
+      home: Home page
+      categories: Categories
+      artists: Artists
+    latest_albums:
+      title: Latest albums
+    featured_tracks:
+      tracks: Tracks
+      hot: Hot
+      top: Top
+      latest: Latest
+      see_more: See more
+  layouts:
+    header:
+      hot: Hot
+      top: Top
+      categories: Categories
+      artists: Artists
+      favourites: Favourites
+      log_out: Log out
+      log_in: Log in
+      sign_up: Sign up
+    footer:
+      copyright_html: Copyright &copy; IMusic 2019

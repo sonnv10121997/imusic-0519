@@ -1,0 +1,21 @@
+<% provide :title, t(".home") %>
+<%= render "featured_slides" %>
+
+<div class="container">
+  <%= render "featured_tracks" %>
+  <%= render "latest_albums" %>
+
+  <h3 class="my-4"><%= t ".categories" %></h3>
+  <div class="row">
+    <% Settings.category.featured_list.times do %>
+      <%= render "categories/category" %>
+    <% end %>
+  </div>
+
+  <h3 class="my-4"><%= t ".artists" %></h3>
+  <div class="row">
+    <% Settings.artist.featured_list.times do %>
+      <%= render "artists/artist" %>
+    <% end %>
+  </div>
+</div>
