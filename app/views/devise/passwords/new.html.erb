@@ -1,0 +1,24 @@
+<% provide :title, t(".forgot_your_password") %>
+
+<div class="container">
+  <div class="rescue_container">
+    <h2 class="col-md-8 offset-md-4"><%= t ".forgot_your_password" %></h2><br>
+
+    <%= form_for resource, as: resource_name, url: password_path(resource_name),
+      html: {method: :post}, class: "form-group" do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field form-group col-md-4 offset-md-4">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="field form-group col-md-8 offset-md-4">
+        <%= link_to t("devise.shared.links.didn_t_receive_confirmation_instructions"),
+          new_confirmation_path(resource_name) %><br />
+        <%= f.submit t(".send_me_reset_password_instructions"),
+          class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

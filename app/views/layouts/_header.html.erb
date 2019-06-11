@@ -15,16 +15,16 @@
               <img class="user_x_thumbnail" src="http://placehold.it/25x25">
             <% end %>
             <div class="dropdown-menu dropdown-menu-right">
-              <%= link_to t(".log_out"), "#", class: "dropdown-item" %>
+              <%= link_to t(".log_out"), destroy_user_session_path, method: :delete,
+                class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
           <li id="navbarLogIn">
-            <%= link_to t(".log_in"), "#", class: "nav-link" %>
+            <%= link_to t(".log_in"), new_user_session_path, class: "nav-link" %>
           </li>
-          <li>
-            <%= link_to t(".sign_up"), "#", class: "nav-link btn btn-primary" %>
-          </li>
+          <li><%= link_to t(".sign_up"), new_user_registration_path,
+            class: "nav-link btn btn-primary" %></li>
         <% end %>
       </ul>
     </div>
