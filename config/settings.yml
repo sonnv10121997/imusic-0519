@@ -8,3 +8,8 @@ category:
   featured_list: 8
 artist:
   featured_list: 4
+min_friendly_token: 0
+max_friendly_token: 20
+omniauth:
+  facebook: facebook
+  google_oauth2: google_oauth2
