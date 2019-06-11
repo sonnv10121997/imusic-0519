@@ -45,3 +45,16 @@ img.user_x_thumbnail {
   max-height: 26px;
   border-radius: 3px;
 }
+
+.hr_text_container {
+  border-bottom: 1px solid black;
+  height: 12px;
+  text-align: center;
+  width: 100%;
+
+  span {
+    background-color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+}

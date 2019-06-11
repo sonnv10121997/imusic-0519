@@ -12,6 +12,17 @@ vi:
       top: Top
       latest: Mới nhất
       see_more: Xem thêm
+  devise:
+    sessions:
+      new:
+        or: hoặc
+        google_oauth2: Đăng nhập bằng Google
+        facebook_omniauth: Đăng nhập bằng Facebook
+    registrations:
+      new:
+        or: hoặc
+        google_oauth2: Đăng nhập bằng Google
+        facebook_omniauth: Đăng nhập bằng Facebook
   layouts:
     header:
       hot: Hot
