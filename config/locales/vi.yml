@@ -13,16 +13,11 @@ vi:
       latest: Mới nhất
       see_more: Xem thêm
   devise:
-    sessions:
-      new:
+    shared:
+      omniauth:
         or: hoặc
-        google_oauth2: Đăng nhập bằng Google
-        facebook_omniauth: Đăng nhập bằng Facebook
-    registrations:
-      new:
-        or: hoặc
-        google_oauth2: Đăng nhập bằng Google
-        facebook_omniauth: Đăng nhập bằng Facebook
+        google_oauth2: Đăng nhập qua
+        facebook_omniauth: Đăng nhập qua
   layouts:
     header:
       hot: Hot

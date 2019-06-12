@@ -13,16 +13,11 @@ en:
       latest: Latest
       see_more: See more
   devise:
-    sessions:
-      new:
+    shared:
+      omniauth:
         or: or
-        google_oauth2: Log in with Google
-        facebook_omniauth: Log in with Facebook
-    registrations:
-      new:
-        or: or
-        google_oauth2: Log in with Google
-        facebook_omniauth: Log in with Facebook
+        google_oauth2: Log in with
+        facebook_omniauth: Log in with
   layouts:
     header:
       hot: Hot

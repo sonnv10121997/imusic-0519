@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="rescue_container">
-    <h2 class="col-md-4 offset-md-4"><%= t ".sign_in" %></h2><br />
+    <h2 class="col-md-4 offset-md-4 text-center"><%= t ".sign_in" %></h2><br />
 
     <%= form_for resource, as: resource_name, url: session_path(resource_name),
       class: "form-group" do |f| %>
@@ -29,21 +29,11 @@
         </div>
       <% end %>
 
-      <div class="field form-group col-md-8 offset-md-4">
+      <div class="field form-group col-md-4 offset-md-4 text-center">
         <%= f.submit t(".sign_in"), class: "btn btn-primary" %>
       </div>
     <% end %>
 
-    <div class="col-md-4 offset-md-4">
-      <div class="hr_text_container">
-        <span><%= t ".or" %></span>
-      </div>
-      <div class="mt-15">
-        <%= link_to t(".google_oauth2"),
-          user_google_oauth2_omniauth_authorize_path %><br>
-        <%= link_to t(".facebook_omniauth"),
-          user_facebook_omniauth_authorize_path %>
-      </div>
-    </div>
+    <%= render "devise/shared/omniauth" %>
   </div>
 </div>
