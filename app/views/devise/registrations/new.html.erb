@@ -9,8 +9,13 @@
       </div>
       <h2 class="col-md-4 offset-md-4 text-center"><%= t ".sign_up" %></h2><br />
       <div class="field form-group col-md-4 offset-md-4">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="field form-group col-md-4 offset-md-4">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        <%= f.email_field :email, class: "form-control" %>
       </div>
 
       <div class="field form-group col-md-4 offset-md-4">

@@ -28,7 +28,10 @@ gem "turbolinks", "5.2.0"
 gem "uglifier", "4.1.20"
 
 group :development, :test do
-  gem "byebug", "11.0.1", platforms: [:mri, :mingw, :x64_mingw]
+  gem "byebug", "11.0.1", platforms: %i(mri mingw x64_mingw)
+  gem "factory_bot_rails", "5.0.2"
+  gem "faker", "1.9.3"
+  gem "rspec-rails", "3.8.2"
 end
 
 group :development do
@@ -41,7 +44,10 @@ end
 group :test do
   gem "capybara", "3.22.0"
   gem "chromedriver-helper", "2.1.1"
+  gem "rails-controller-testing", "1.0.4"
+  gem "rspec-activemodel-mocks", "1.1.0"
   gem "selenium-webdriver", "3.142.3"
+  gem "shoulda-matchers", "4.0.1"
 end
 
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)

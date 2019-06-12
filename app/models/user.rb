@@ -10,6 +10,9 @@ class User < ApplicationRecord
   has_many :comments
   has_many :favourites
 
+  validates :name, length: {maximum: Settings.user.name.max_length},
+    presence: true
+
   class << self
     def from_omniauth auth
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
