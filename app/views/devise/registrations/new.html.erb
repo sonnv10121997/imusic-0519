@@ -7,7 +7,7 @@
       <div class="field form-group col-md-6 offset-md-3">
         <%= render "devise/shared/error_messages", resource: resource %>
       </div>
-      <h2 class="col-md-4 offset-md-4"><%= t ".sign_up" %></h2><br />
+      <h2 class="col-md-4 offset-md-4 text-center"><%= t ".sign_up" %></h2><br />
       <div class="field form-group col-md-4 offset-md-4">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -31,21 +31,14 @@
 
       <div class="form-group col-md-8 offset-md-4 actions">
         <%= link_to t("devise.shared.links.didn_t_receive_confirmation_instructions"),
-          new_confirmation_path(resource_name) %><br /><br />
+          new_confirmation_path(resource_name) %>
+      </div>
+
+      <div class="field form-group col-md-4 offset-md-4 text-center">
         <%= f.submit t(".sign_up"), class: "btn btn-primary" %>
       </div>
     <% end %>
 
-    <div class="col-md-4 offset-md-4">
-      <div class="hr_text_container">
-        <span><%= t ".or" %></span>
-      </div>
-      <div class="mt-15">
-        <%= link_to t(".google_oauth2"),
-          user_google_oauth2_omniauth_authorize_path %><br>
-        <%= link_to t(".facebook_omniauth"),
-          user_facebook_omniauth_authorize_path %>
-      </div>
-    </div>
+    <%= render "devise/shared/omniauth" %>
   </div>
 </div>

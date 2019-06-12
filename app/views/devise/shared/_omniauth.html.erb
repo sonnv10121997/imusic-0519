@@ -1,0 +1,23 @@
+<div class="col-md-4 offset-md-4">
+  <div class="hr_text_container">
+    <span><%= t ".or" %></span>
+  </div>
+  <div class="mt-15">
+    <%= link_to user_google_oauth2_omniauth_authorize_path  do %>
+      <span class="btn btn-danger">
+        <span class="vertical_text_bottom">
+          <%= t ".google_oauth2" %>
+        </span>
+        <%= fa_icon "google" %>
+      </span>
+    <% end %>
+    <%= link_to user_facebook_omniauth_authorize_path, class: "float-right" do %>
+      <span class="btn btn-info">
+        <span class="vertical_text_bottom">
+          <%= t ".facebook_omniauth" %>
+        </span>
+        <%= fa_icon "facebook-official" %>
+      </span>
+    <% end %>
+  </div>
+</div>
