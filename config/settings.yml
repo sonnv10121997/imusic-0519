@@ -1,5 +1,8 @@
 application:
   title: IMusic
+user:
+  name:
+    max_length: 50
 track:
   featured_list: 3
 album:
