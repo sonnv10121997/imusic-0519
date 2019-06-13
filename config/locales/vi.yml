@@ -1,4 +1,23 @@
 vi:
+  admin:
+    index:
+      access_denied: Bạn không có quyền truy cập nội dung này!
+      dashboard: Bảng điều khiển
+      albums: Albums
+      artists: Nghệ sĩ
+      categories: Chủ đề
+      lyrics: Lời bài hát
+      tracks: Bài hát
+      users: Người dùng
+    sidebar:
+      home_page: Trang chủ
+      dashboard: Bảng điều khiển
+      albums: Albums
+      artists: Nghệ sĩ
+      categories: Chủ đề
+      lyrics: Lời bài hát
+      tracks: Bài hát
+      users: Người dùng
   home_page:
     index:
       home: Trang chủ
@@ -28,5 +47,6 @@ vi:
       log_out: Đăng xuất
       log_in: Đăng nhập
       sign_up: Đăng kí
+      admin_page: Trang quản trị
     footer:
       copyright_html: "&copy; Bản quyền thuộc về IMusic 2019"

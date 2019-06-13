@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top h-56px">
   <div class="container">
     <%= link_to Settings.application.title, root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbar">
@@ -15,8 +15,12 @@
               <img class="user_x_thumbnail" src="http://placehold.it/25x25">
             <% end %>
             <div class="dropdown-menu dropdown-menu-right">
+              <% if current_user.admin? %>
+                <%= link_to t(".admin_page"), admin_path,
+                  class: "dropdown-item f-1rem" %>
+              <% end %>
               <%= link_to t(".log_out"), destroy_user_session_path, method: :delete,
-                class: "dropdown-item" %>
+                class: "dropdown-item f-1rem" %>
             </div>
           </li>
         <% else %>

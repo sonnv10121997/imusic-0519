@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'font-awesome';
 @import 'modern-business';
+@import 'sb-admin-2';
 @import '*';
 
 .py-1rem {
@@ -80,4 +81,16 @@ hr.hide_last_child:last-child {
 
 .list_style_none {
   list-style-type: none;
+}
+
+.f-1rem {
+  font-size: 1rem;
+}
+
+.mt-56 {
+  margin-top: 56px;
+}
+
+.h-56px {
+  height: 56px;
 }
