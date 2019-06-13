@@ -57,6 +57,9 @@ vi:
       latest: Mới nhất
       see_more: Xem thêm
   devise:
+    registrations:
+      new:
+        name: Tên
     shared:
       omniauth:
         or: hoặc
