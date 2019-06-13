@@ -2,6 +2,7 @@
 //= require i18n.js
 //= require i18n/translations
 //= require jquery3
+//= require sb-admin-2
 //= require popper
 //= require bootstrap
 //= require rails-ujs

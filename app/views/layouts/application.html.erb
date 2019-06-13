@@ -10,8 +10,8 @@
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
 
-  <body>
-    <%= render "layouts/header" %>
+  <body id="page-top" class="<%= "mt-56" unless admin_index? %>">
+    <%= render "layouts/header" unless admin_index? %>
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %> m1_1rem col-md-4">
         <a href="#" data-dismiss="alert" class="close">×</a>
@@ -19,7 +19,7 @@
       </div>
     <% end %>
     <%= yield %>
-    <%= render "layouts/footer" %>
+    <%= render "layouts/footer" unless admin_index? %>
   </body>
 
   <%= javascript_tag defer: true, nonce: true do %>

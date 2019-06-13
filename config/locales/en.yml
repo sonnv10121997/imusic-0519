@@ -1,4 +1,23 @@
 en:
+  admin:
+    index:
+      access_denied: You don't have permission to access this content!
+      dashboard: Dashboard
+      albums: Albums
+      artists: Aritsts
+      categories: Categories
+      lyrics: Lyrics
+      tracks: Tracks
+      users: Users
+    sidebar:
+      home_page: Home page
+      dashboard: Dashboard
+      albums: Albums
+      artists: Aritsts
+      categories: Categories
+      lyrics: Lyrics
+      tracks: Tracks
+      users: Users
   home_page:
     index:
       home: Home page
@@ -28,5 +47,6 @@ en:
       log_out: Log out
       log_in: Log in
       sign_up: Sign up
+      admin_page: Admin page
     footer:
       copyright_html: Copyright &copy; IMusic 2019

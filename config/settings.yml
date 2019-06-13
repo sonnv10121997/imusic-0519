@@ -1,5 +1,6 @@
 application:
   title: IMusic
+  admin_title: Admin IMusic
 user:
   name:
     max_length: 50
