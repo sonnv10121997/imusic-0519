@@ -9,3 +9,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).on(`turbolinks:load`, function () {
+  $(`#notification`).fadeOut(5000);
+});

@@ -57,6 +57,9 @@ en:
       latest: Latest
       see_more: See more
   devise:
+    registrations:
+      new:
+        name: Name
     shared:
       omniauth:
         or: or
