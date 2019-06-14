@@ -9,6 +9,31 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+    categories:
+      not_found: Không tìm thấy chủ đề!
+      index:
+        categories: Chủ đề
+        name: Tên
+        show: Xem
+        edit: Sửa
+        delete: Xóa
+        are_you_sure: Bạn có chắc?
+        create_new: Tạo chủ đề mới
+      create:
+        created: Tạo chủ đề thành công!
+      update:
+        updated: Sửa chủ đề thành công!
+      destroy:
+        destroyed: Xóa chủ để thành công!
+        faild_to_destroyed: Xóa chủ để không thành công!
+      new:
+        new_category: Tạo chủ đề mới
+        back: Trở lại
+      edit:
+        title: Sửa chủ đề
+        back: Trở lại
+      form:
+        name: Tên
     sidebar:
       home_page: Trang chủ
       dashboard: Bảng điều khiển
@@ -37,6 +62,12 @@ vi:
         or: hoặc
         google_oauth2: Đăng nhập qua
         facebook_omniauth: Đăng nhập qua
+  views:
+    pagination:
+      first: "&laquo; Trang đầu"
+      previous: "&lsaquo; Trang trước"
+      next: Trang sau &rsaquo;
+      last: Trang cuối &raquo;
   layouts:
     header:
       hot: Hot

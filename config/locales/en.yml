@@ -9,6 +9,31 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+    categories:
+      not_found: Category not found!
+      index:
+        categories: Categories
+        name: Name
+        show: Show
+        edit: Edit
+        delete: Delete
+        are_you_sure: Are you sure?
+        create_new: Create new Category
+      create:
+        created: Category was successfully created!
+      update:
+        updated: Category was successfully updated!
+      destroy:
+        destroyed: Category was successfully destroyed!
+        faild_to_destroyed: Category was unsuccessfully destroyed!
+      new:
+        new_category: New Category
+        back: Back
+      edit:
+        title: Editing Category
+        back: Back
+      form:
+        name: Name
     sidebar:
       home_page: Home page
       dashboard: Dashboard
