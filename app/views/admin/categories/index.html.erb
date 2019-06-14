@@ -9,10 +9,10 @@
     <% @admin_categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td><%= link_to t(".edit"), edit_admin_category_path(category),
+        <td><%= link_to t("admin.action.edit"), edit_admin_category_path(category),
           class: "card-link" %></td>
-        <td><%= link_to t(".delete"), admin_category_path(category),
-          method: :delete, data: {confirm: t(".are_you_sure")},
+        <td><%= link_to t("admin.action.delete"), admin_category_path(category),
+          method: :delete, data: {confirm: t("admin.action.confirm")},
           class: "card-link" %></td>
       </tr>
     <% end %>
@@ -21,4 +21,4 @@
 
 <%= paginate @admin_categories %>
 
-<%= link_to t(".create_new"), new_admin_category_path, class: "card-link" %>
+<%= link_to t("admin.action.new"), new_admin_category_path, class: "card-link" %>

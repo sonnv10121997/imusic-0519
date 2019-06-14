@@ -1,0 +1,32 @@
+<%= form_for [:admin, admin_artist], as: :admin_artist do |form| %>
+  <% if admin_artist.errors.any? %>
+    <div class="col-md-5 offset-md-2 px-0">
+      <%= render "devise/shared/error_messages", resource: admin_artist %>
+    </div>
+  <% end %>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :name, t(".name") %>
+    <%= form.text_field :name, class: "form-control", autofocus: true %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :description, t(".description") %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :dob, t(".dob") %><br>
+    <%= form.date_select :dob, {start_year: Settings.artist.start_year},
+      {class: "form-control w-auto d-inline"} %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :country, t(".country") %>
+    <%= form.text_field :country, class: "form-control" %>
+  </div>
+
+  <div class="actions offset-md-2">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

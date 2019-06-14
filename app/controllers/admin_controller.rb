@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   before_action :authenticate_administrator
 
   def index
-    @category_size = Category.pluck(:id).size
+    @support = Supports::Admin.new
   end
 
   protected

@@ -1,0 +1,35 @@
+<% provide :title, t(".title") %>
+
+<h3 class="my-4"><%= t ".title" %></h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".description" %></th>
+      <th><%= t ".dob" %></th>
+      <th><%= t ".country" %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.description %></td>
+        <td><%= artist.dob %></td>
+        <td><%= artist.country %></td>
+        <td><%= link_to t("admin.action.edit"), edit_admin_artist_path(artist),
+          class: "card-link" %></td>
+        <td><%= link_to t("admin.action.delete"), admin_artist_path(artist),
+          method: :delete, data: {confirm: t("admin.action.confirm")},
+          class: "card-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t("admin.action.new"), new_admin_artist_path, class: "card-link" %>
