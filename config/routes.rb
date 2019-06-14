@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, skip: :omniauth_callbacks
-    get "/admin", to: "admin#index"
+    namespace :admin do
+      resources :categories, except: :show
+      root "/admin#index"
+    end
     post "/rate", to: "rate#create", as: "rate"
     root "home_page#index"
   end

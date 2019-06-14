@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
   id="accordionSidebar">
 
-  <%= link_to admin_path, class: "sidebar-brand d-flex align-items-center
+  <%= link_to admin_root_path, class: "sidebar-brand d-flex align-items-center
     justify-content-center" do %>
     <div class="sidebar-brand-icon"><%= fa_icon "play" %></div>
     <div class="sidebar-brand-text mx-3">
@@ -18,8 +18,8 @@
     <% end %>
   </li>
 
-  <li class="nav-item active">
-    <%= link_to admin_path, class: "nav-link" do %>
+  <li class="nav-item">
+    <%= link_to admin_root_path, class: "nav-link" do %>
       <%= fa_icon "tachometer" %>
       <span><%= t ".dashboard" %></span>
     <% end %>
@@ -42,7 +42,7 @@
   </li>
 
   <li class="nav-item">
-    <%= link_to "#", class: "nav-link" do %>
+    <%= link_to admin_categories_path, class: "nav-link" do %>
       <%= fa_icon "folder-open" %>
       <span><%= t ".categories" %></span>
     <% end %>

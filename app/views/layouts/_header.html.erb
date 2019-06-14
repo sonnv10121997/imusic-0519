@@ -16,7 +16,7 @@
             <% end %>
             <div class="dropdown-menu dropdown-menu-right">
               <% if current_user.admin? %>
-                <%= link_to t(".admin_page"), admin_path,
+                <%= link_to t(".admin_page"), admin_root_path,
                   class: "dropdown-item f-1rem" %>
               <% end %>
               <%= link_to t(".log_out"), destroy_user_session_path, method: :delete,

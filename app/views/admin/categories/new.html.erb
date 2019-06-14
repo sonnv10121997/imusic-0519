@@ -1,0 +1,16 @@
+<% provide :title, t(".new_category") %>
+
+<div id="wrapper">
+  <%= render "admin/sidebar" %>
+
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <div class="container-fluid">
+        <h3 class="my-4"><%= t ".new_category" %></h3>
+
+        <%= render "form", admin_category: @admin_category %>
+        <%= link_to t(".back"), admin_categories_path, class: "card-link" %>
+      </div>
+    </div>
+  </div>
+</div>
