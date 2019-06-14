@@ -1,5 +1,13 @@
 en:
   admin:
+    resource:
+      not_found: Resource not found!
+    action:
+      new: Create new
+      edit: Edit
+      delete: Delete
+      confirm: Are you sure?
+      back: Back
     index:
       access_denied: You don't have permission to access this content!
       dashboard: Dashboard
@@ -9,16 +17,33 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+    artists:
+      index:
+        title: Artists
+        name: Name
+        description: Description
+        dob: Date of birth
+        country: Country
+      new:
+        title: New Artist
+      edit:
+        title: Edit Artist
+      create:
+        created: Artist was successfully created!
+      update:
+        updated: Artist was successfully updated!
+      destroy:
+        destroyed: Artist was successfully destroyed!
+        faild_to_destroyed: Artist was unsuccessfully destroyed!
+      form:
+        name: Name
+        description: Description
+        dob: Date of birth
+        country: Country
     categories:
-      not_found: Category not found!
       index:
         categories: Categories
         name: Name
-        show: Show
-        edit: Edit
-        delete: Delete
-        are_you_sure: Are you sure?
-        create_new: Create new Category
       create:
         created: Category was successfully created!
       update:

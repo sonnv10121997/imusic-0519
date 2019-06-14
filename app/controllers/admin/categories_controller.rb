@@ -46,7 +46,7 @@ class Admin::CategoriesController < AdminController
     @admin_category = Category.find_by id: params[:id]
 
     return if admin_category
-    redirect_to admin_categories_path, alert: t("admin.categories.not_found")
+    redirect_to admin_categories_path, alert: t("admin.resource.not_found")
   end
 
   def admin_category_params

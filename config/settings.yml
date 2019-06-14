@@ -15,6 +15,11 @@ category:
     max_length: 30
 artist:
   featured_list: 4
+  start_year: 1800
+  name:
+    max_length: 50
+  country:
+    max_length: 50
 min_friendly_token: 0
 max_friendly_token: 20
 omniauth:
