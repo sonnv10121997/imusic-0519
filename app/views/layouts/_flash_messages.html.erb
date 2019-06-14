@@ -1,0 +1,7 @@
+<% flash.each do |key, value| %>
+  <div id="notification" class="alert alert-<%= key %> m4_1rem
+    position-fixed col-md-4">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul class="list_style_none no_margin no_padding"><li><%= value %></li></ul>
+  </div>
+<% end %>
