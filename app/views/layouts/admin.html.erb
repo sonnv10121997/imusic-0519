@@ -9,7 +9,18 @@
 
   <body id="page-top">
     <%= render "layouts/flash_messages" %>
-    <%= yield %>
+
+    <div id="wrapper">
+      <%= render "admin/sidebar" %>
+
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <div class="container-fluid">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <%= render "layouts/i18n_js" %>
