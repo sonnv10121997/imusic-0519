@@ -16,10 +16,4 @@ class ApplicationController < ActionController::Base
   def default_url_options options = {}
     {locale: I18n.locale}.merge options
   end
-
-  def authenticate_administrator
-    return true if current_user&.admin?
-    flash[:error] = t(".access_denied")
-    redirect_to root_path
-  end
 end

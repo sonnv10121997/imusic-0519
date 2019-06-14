@@ -2,16 +2,14 @@
 <html>
   <head>
     <title>
-      <%= rescue_title Settings.application.title, yield(:title) %>
+      <%= rescue_title Settings.application.admin_title, yield(:title) %>
     </title>
     <%= render "layouts/head" %>
   </head>
 
-  <body id="page-top" class="mt-56">
-    <%= render "layouts/header" %>
+  <body id="page-top">
     <%= render "layouts/flash_messages" %>
     <%= yield %>
-    <%= render "layouts/footer" %>
   </body>
 
   <%= render "layouts/i18n_js" %>
