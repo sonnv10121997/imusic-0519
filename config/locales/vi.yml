@@ -17,6 +17,27 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+    albums:
+      index:
+        title: Danh sách Album
+        name: Tên album
+        year: Năm phát hành
+        artist: Nghệ sĩ
+      new:
+        title: Tạo mới Album
+      edit:
+        title: Sửa Album
+      create:
+        created: Tạo Album thành công!
+      update:
+        updated: Sửa Album thành công!
+      destroy:
+        destroyed: Xóa Album thành công!
+        faild_to_destroyed: Xóa Album không thành công!
+      form:
+        name: Tên album
+        year: Năm phát hành
+        artist: Nghệ sĩ
     artists:
       index:
         title: Nghệ sĩ

@@ -1,0 +1,33 @@
+<% provide :title, t(".title") %>
+
+<h3 class="my-4"><%= t ".title" %></h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".year" %></th>
+      <th><%= t ".artist" %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_albums.each do |album| %>
+      <tr>
+        <td><%= album.name %></td>
+        <td><%= album.year %></td>
+        <td><%= album.artist_name %></td>
+        <td><%= link_to t("admin.action.edit"), edit_admin_album_path(album),
+          class: "card-link" %></td>
+        <td><%= link_to t("admin.action.delete"), admin_album_path(album),
+          method: :delete, data: {confirm: t("admin.action.confirm")},
+          class: "card-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t("admin.action.new"), new_admin_album_path, class: "card-link" %>
