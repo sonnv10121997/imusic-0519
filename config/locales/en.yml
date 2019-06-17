@@ -23,6 +23,7 @@ en:
         name: Album name
         year: Release year
         artist: Artist
+        categories: Categories
       new:
         title: New Album
       edit:
@@ -38,6 +39,7 @@ en:
         name: Album name
         year: Release year
         artist: Artist
+        categories: Categories
     artists:
       index:
         title: Artists

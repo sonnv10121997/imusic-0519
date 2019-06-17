@@ -23,6 +23,7 @@ vi:
         name: Tên album
         year: Năm phát hành
         artist: Nghệ sĩ
+        categories: Chủ đề
       new:
         title: Tạo mới Album
       edit:
@@ -38,6 +39,7 @@ vi:
         name: Tên album
         year: Năm phát hành
         artist: Nghệ sĩ
+        categories: Chủ đề
     artists:
       index:
         title: Nghệ sĩ
