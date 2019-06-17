@@ -10,16 +10,24 @@
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field form-group col-md-6 offset-md-2 px-0">
-    <%= form.label :year, t(".year") %>
-    <%= form.select :year, Settings.album.year.start..Time.now.year,
-      {selected: Time.now.year}, class: "form-control" %>
+  <div class="form-row">
+    <div class="field form-group offset-md-2 col-3">
+      <%= form.label :year, t(".year") %>
+      <%= form.select :year, Settings.album.year.start..Time.now.year,
+        {selected: Time.now.year}, class: "form-control" %>
+    </div>
+
+    <div class="field form-group col-3 px-0">
+      <%= form.label :artist_id, t(".artist") %>
+      <%= form.select :artist_id, artists_reference_collection, {},
+        class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field form-group col-md-6 offset-md-2 px-0">
-    <%= form.label :artist_id, t(".artist") %>
-    <%= form.select :artist_id, artists_reference_collection, {},
-      class: "form-control" %>
+  <div class="field form-group col-md-2 offset-md-2 px-0">
+    <%= form.label :category_albums, t(".categories") %>
+    <%= form.select :category_ids, categories_reference_collection, {},
+      {class: "form-control", multiple: true} %>
   </div>
 
   <div class="offset-md-2">
