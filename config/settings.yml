@@ -9,6 +9,11 @@ track:
   featured_list: 3
 album:
   featured_list: 8
+  name:
+    max_length: 70
+  year:
+    minimum: 0
+    start: 1800
 category:
   featured_list: 8
   name:

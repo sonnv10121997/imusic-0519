@@ -1,0 +1,28 @@
+<%= form_for [:admin, admin_album], as: :admin_album do |form| %>
+  <% if admin_album.errors.any? %>
+    <div class="col-md-6 offset-md-2 px-0">
+      <%= render "devise/shared/error_messages", resource: admin_album %>
+    </div>
+  <% end %>
+
+  <div class="field form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :name, t(".name") %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :year, t(".year") %>
+    <%= form.select :year, Settings.album.year.start..Time.now.year,
+      {selected: Time.now.year}, class: "form-control" %>
+  </div>
+
+  <div class="field form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :artist_id, t(".artist") %>
+    <%= form.select :artist_id, artists_reference_collection, {},
+      class: "form-control" %>
+  </div>
+
+  <div class="offset-md-2">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
