@@ -17,6 +17,29 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+    tracks:
+      index:
+        tracks: List of Tracks
+        title: Track's title
+        year: Release year
+        artist: Artist
+        album: Album
+      new:
+        title: New Track
+      edit:
+        title: Edit Track
+      create:
+        created: Track was successfully created!
+      update:
+        updated: Track was successfully updated!
+      destroy:
+        destroyed: Track was successfully destroyed!
+        faild_to_destroyed: Track was unsuccessfully destroyed!
+      form:
+        title: Track's title
+        year: Release year
+        artist: Artist
+        Album: Album
     albums:
       index:
         title: List of Albums

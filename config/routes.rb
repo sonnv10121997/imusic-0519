@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, skip: :omniauth_callbacks
     namespace :admin do
+      resources :tracks, except: :show
       resources :albums, except: :show
       resources :artists, except: :show
       resources :categories, except: :show
