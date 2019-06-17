@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_07_015134) do
-
-  create_table "album_tracks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "album_id"
-    t.bigint "track_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["album_id"], name: "index_album_tracks_on_album_id"
-    t.index ["track_id"], name: "index_album_tracks_on_track_id"
-  end
+ActiveRecord::Schema.define(version: 2019_06_17_085323) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -140,6 +131,8 @@ ActiveRecord::Schema.define(version: 2019_06_07_015134) do
     t.bigint "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "album_id"
+    t.index ["album_id"], name: "index_tracks_on_album_id"
     t.index ["artist_id"], name: "index_tracks_on_artist_id"
   end
 
@@ -163,8 +156,6 @@ ActiveRecord::Schema.define(version: 2019_06_07_015134) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "album_tracks", "albums"
-  add_foreign_key "album_tracks", "tracks"
   add_foreign_key "category_albums", "albums"
   add_foreign_key "category_albums", "categories"
   add_foreign_key "comments", "tracks"
@@ -173,4 +164,5 @@ ActiveRecord::Schema.define(version: 2019_06_07_015134) do
   add_foreign_key "lyrics", "users"
   add_foreign_key "track_lyrics", "lyrics"
   add_foreign_key "track_lyrics", "tracks"
+  add_foreign_key "tracks", "albums"
 end
