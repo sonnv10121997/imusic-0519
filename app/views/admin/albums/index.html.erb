@@ -32,8 +32,8 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table><br>
 
-<br>
+<%= paginate @admin_albums %>
 
 <%= link_to t("admin.action.new"), new_admin_album_path, class: "card-link" %>

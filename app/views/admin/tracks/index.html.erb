@@ -28,8 +28,8 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table><br>
 
-<br>
+<%= paginate @admin_tracks %>
 
 <%= link_to t("admin.action.new"), new_admin_track_path %>
