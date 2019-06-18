@@ -4,10 +4,9 @@ class Track < ApplicationRecord
   belongs_to :artist
   belongs_to :album
 
-  has_many :track_lyrics, dependent: :destroy
-  has_many :lyrics, through: :track_lyrics, dependent: :destroy
   has_many :favourites, as: :favourable, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :lyrics, dependent: :destroy
 
   delegate :name, to: :artist, prefix: true
   delegate :name, to: :album, prefix: true

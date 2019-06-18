@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_085323) do
+ActiveRecord::Schema.define(version: 2019_06_18_012042) do
 
   create_table "albums", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 2019_06_17_085323) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "track_id"
+    t.index ["track_id"], name: "index_lyrics_on_track_id"
     t.index ["user_id"], name: "index_lyrics_on_user_id"
   end
 
@@ -112,15 +114,6 @@ ActiveRecord::Schema.define(version: 2019_06_17_085323) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
-  end
-
-  create_table "track_lyrics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "lyric_id"
-    t.bigint "track_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["lyric_id"], name: "index_track_lyrics_on_lyric_id"
-    t.index ["track_id"], name: "index_track_lyrics_on_track_id"
   end
 
   create_table "tracks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -161,8 +154,7 @@ ActiveRecord::Schema.define(version: 2019_06_17_085323) do
   add_foreign_key "comments", "tracks"
   add_foreign_key "comments", "users"
   add_foreign_key "favourites", "users"
+  add_foreign_key "lyrics", "tracks"
   add_foreign_key "lyrics", "users"
-  add_foreign_key "track_lyrics", "lyrics"
-  add_foreign_key "track_lyrics", "tracks"
   add_foreign_key "tracks", "albums"
 end
