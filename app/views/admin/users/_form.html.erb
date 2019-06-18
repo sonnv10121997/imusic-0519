@@ -1,0 +1,34 @@
+<%= form_for [:admin, admin_user], as: :admin_user do |form| %>
+  <% if admin_user.errors.any? %>
+    <div class="col-md-6 offset-md-2 px-0">
+      <%= render "devise/shared/error_messages", resource: admin_user %>
+    </div>
+  <% end %>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :name, t(".name") %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control",
+      disabled: form.object.persisted? %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :password %>
+    <%= form.password_field :password, autocomplete: "off",
+      class: "form-control", disabled: form.object.persisted? %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :confirmed_at %><br>
+    <%= form.datetime_select :confirmed_at, {}, class: "form-control w-auto
+      d-inline", disabled: form.object.persisted? %>
+  </div>
+
+  <div class="offset-md-2">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

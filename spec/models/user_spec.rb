@@ -37,11 +37,24 @@ RSpec.describe User, type: :model do
   context "validates" do
     describe "#name" do
       it {is_expected.to validate_presence_of :name}
-      it {is_expected.to validate_length_of :name}
+      it {is_expected.to validate_uniqueness_of :name}
+      it {is_expected.to validate_length_of(:name)
+        .is_at_most Settings.user.name.max_length}
     end
 
     describe "#email" do
       it {is_expected.to validate_presence_of :email}
     end
+
+    describe "#password" do
+      it {is_expected.to validate_length_of(:password)
+        .is_at_least Settings.user.password.minimum}
+    end
+  end
+
+  context "associations" do
+    it {is_expected.to have_many(:lyrics).dependent :destroy}
+    it {is_expected.to have_many(:comments).dependent :destroy}
+    it {is_expected.to have_many(:favourites).dependent :destroy}
   end
 end

@@ -6,11 +6,9 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, skip: :omniauth_callbacks
     namespace :admin do
-      resources :lyrics, except: :show
-      resources :tracks, except: :show
-      resources :albums, except: :show
-      resources :artists, except: :show
-      resources :categories, except: :show
+      %i(users lyrics tracks albums artists categories).each do |model|
+        resources model, except: :show
+      end
       root "/admin#index"
     end
     post "/rate", to: "rate#create", as: "rate"
