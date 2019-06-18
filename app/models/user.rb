@@ -1,17 +1,20 @@
 class User < ApplicationRecord
   OMNIAUTH_PROVIDERS = %W(#{Settings.omniauth.facebook}
     #{Settings.omniauth.google_oauth2}).freeze
+  USER_PARAMS = %i(name email password confirmed_at).freeze
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :validatable, :confirmable, :omniauthable,
     omniauth_providers: OMNIAUTH_PROVIDERS.map(&:to_sym)
 
-  has_many :lyrics
-  has_many :comments
-  has_many :favourites
+  has_many :lyrics, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :favourites, dependent: :destroy
 
   validates :name, length: {maximum: Settings.user.name.max_length},
-    presence: true
+    presence: true, uniqueness: true
+  validates :password, length: {minimum: Settings.user.password.minimum},
+    on: :update, allow_nil: true
 
   class << self
     def from_omniauth auth

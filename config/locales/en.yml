@@ -17,6 +17,26 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+    users:
+      index:
+        title: List of Users
+        name: Name
+        email: Email
+        confirmed_at: Confirmed_at
+        confirmation_token: Confirmation_token
+      new:
+        title: Tạo người dùng
+      edit:
+        title: Sửa người dùng
+      create:
+        created: User was successfully created!
+      update:
+        updated: User was successfully updated!
+      destroy:
+        destroyed: User was successfully destroyed!
+        faild_to_destroyed: User was unsuccessfully destroyed!
+      form:
+        name: Name
     lyrics:
       index:
         title: List of Lyrics

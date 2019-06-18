@@ -17,6 +17,26 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+    users:
+      index:
+        title: Danh sách người dùng
+        name: Tên
+        email: Email
+        confirmed_at: Xác nhận lúc
+        confirmation_token: Mã xác nhận
+      new:
+        title: Tạo người dùng
+      edit:
+        title: Sửa người dùng
+      create:
+        created: Tạo người dùng thành công!
+      update:
+        updated: Sửa người dùng thành công!
+      destroy:
+        destroyed: Xóa người dùng thành công!
+        faild_to_destroyed: Xóa người dùng không thành công!
+      form:
+        name: Tên
     lyrics:
       index:
         title: Danh sách lời bài hát

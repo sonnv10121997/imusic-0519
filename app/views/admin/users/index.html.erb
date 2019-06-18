@@ -1,0 +1,35 @@
+<% provide :title, t(".title") %>
+
+<h3 class="my-4"><%= t ".title" %></h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".confirmed_at" %></th>
+      <th><%= t ".confirmation_token" %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.confirmed_at %></td>
+        <td><%= user.confirmation_token %></td>
+        <td><%= link_to t("admin.action.edit"), edit_admin_user_path(user),
+          class: "card-link" %></td>
+        <td><%= link_to t("admin.action.delete"), admin_user_path(user),
+          method: :delete, data: {confirm: t("admin.action.confirm")},
+          class: "card-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><br>
+
+<%= paginate @admin_users %>
+
+<%= link_to t("admin.action.new"), new_admin_user_path %>
