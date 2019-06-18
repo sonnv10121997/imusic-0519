@@ -1,0 +1,35 @@
+<%= form_for [:admin, admin_lyric], as: :admin_lyric do |form| %>
+  <% if admin_lyric.errors.any? %>
+    <div class="col-md-6 offset-md-2 px-0">
+      <%= render "devise/shared/error_messages", resource: admin_lyric %>
+    </div>
+  <% end %>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.label :content, t(".content") %>
+    <%= form.text_area :content, class: "form-control" %>
+  </div>
+
+  <div class="form-group col-md-6 offset-md-2 px-0">
+    <%= form.check_box :approved %>
+    <%= form.label :approved, t(".approved") %>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-3 offset-md-2">
+      <%= form.label :user_id, t(".contributor") %>
+      <%= form.select :user_id, users_reference_collection, {},
+        class: "form-control" %>
+    </div>
+
+    <div class="form-group col-md-3 px-0">
+      <%= form.label :track_id, t(".track") %>
+      <%= form.select :track_id, tracks_reference_collection, {},
+        class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="offset-md-2">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

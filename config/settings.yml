@@ -30,6 +30,8 @@ artist:
     max_length: 50
   country:
     max_length: 50
+lyric:
+  featured_list: 4
 min_friendly_token: 0
 max_friendly_token: 20
 omniauth:

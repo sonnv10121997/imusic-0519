@@ -17,6 +17,31 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+    lyrics:
+      index:
+        title: List of Lyrics
+        content: Content
+        approved: Approved
+        track: Track
+        contributor: Contributor
+        true_approval: "True"
+        false_approval: "False"
+      new:
+        title: New Lyric
+      edit:
+        title: Edit Lyric
+      create:
+        created: Lyric was successfully created!
+      update:
+        updated: Lyric was successfully updated!
+      destroy:
+        destroyed: Lyric was successfully destroyed!
+        faild_to_destroyed: Lyric was unsuccessfully destroyed!
+      form:
+        content: Content
+        approved: Approved
+        track: Track
+        contributor: Contributor
     tracks:
       index:
         tracks: List of Tracks

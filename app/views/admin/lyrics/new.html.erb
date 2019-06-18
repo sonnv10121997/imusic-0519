@@ -1,0 +1,8 @@
+<% provide :title, t(".title") %>
+
+<h3 class="my-4 offset-md-4"><%= t ".title" %></h3>
+
+<%= render "form", admin_lyric: @admin_lyric %>
+
+<%= link_to t("admin.action.back"), admin_lyrics_path,
+  class: "card-link offset-md-2" %>

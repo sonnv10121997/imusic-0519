@@ -1,0 +1,39 @@
+<% provide :title, t(".title") %>
+
+<h3 class="my-4"><%= t ".title" %></h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".content" %></th>
+      <th><%= t ".approved" %></th>
+      <th><%= t ".track" %></th>
+      <th><%= t ".contributor" %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_lyrics.each do |lyric| %>
+      <tr>
+        <td><%= simple_format lyric.content %></td>
+        <td>
+          <div class="<%= lyric_approval_helper lyric.approved %>">
+            <%= t ".#{lyric.approved}_approval" %>
+          </div>
+        </td>
+        <td><%= lyric.track_title %></td>
+        <td><%= lyric.user_name %></td>
+        <td><%= link_to t("admin.action.edit"), edit_admin_lyric_path(lyric),
+          class: "card-link" %></td>
+        <td><%= link_to t("admin.action.delete"), admin_lyric_path(lyric),
+          method: :delete, data: {confirm: t("admin.action.confirm")},
+          class: "card-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t("admin.action.new"), new_admin_lyric_path %>
