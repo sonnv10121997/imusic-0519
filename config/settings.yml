@@ -7,6 +7,11 @@ user:
     max_length: 50
 track:
   featured_list: 3
+  title:
+    max_length: 30
+  year:
+    minimum: 0
+    start: 1800
 album:
   featured_list: 8
   name:
