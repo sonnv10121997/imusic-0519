@@ -1,5 +1,5 @@
 class Album < ApplicationRecord
-  ALBUM_PARAMS = [:name, :year, :artist_id, category_ids: []].freeze
+  ALBUM_PARAMS = [:name, :year, :artist_id, :cover, category_ids: []].freeze
 
   belongs_to :artist
 
@@ -7,6 +7,7 @@ class Album < ApplicationRecord
   has_many :favourites, as: :favourable
   has_many :categories, through: :category_albums
   has_many :tracks
+  has_one_attached :cover
 
   delegate :name, to: :artist, prefix: true
 
@@ -16,4 +17,8 @@ class Album < ApplicationRecord
     greater_than: Settings.album.year.minimum}
   validates :artist, presence: true
   validates :category_albums, presence: true
+  validates :cover, attached: true, content_type: Settings.album.cover.file_type,
+    size: {less_than: Settings.album.cover.max_size.megabytes}
+
+  scope :latest_with_limit, ->(limit) {order(created_at: :desc).limit limit}
 end
