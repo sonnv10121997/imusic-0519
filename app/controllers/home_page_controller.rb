@@ -1,3 +1,5 @@
 class HomePageController < ApplicationController
-  def index; end
+  def index
+    @support = Supports::HomePage.new
+  end
 end

@@ -7,9 +7,7 @@
 
   <h3 class="my-4"><%= t ".categories" %></h3>
   <div class="row">
-    <% Settings.category.featured_list.times do %>
-      <%= render "categories/category" %>
-    <% end %>
+    <%= render @support.take_helper Category.name, Settings.category.featured_list %>
   </div>
 
   <h3 class="my-4"><%= t ".artists" %></h3>
