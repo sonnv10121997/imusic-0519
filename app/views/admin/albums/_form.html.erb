@@ -24,10 +24,18 @@
     </div>
   </div>
 
-  <div class="field form-group col-md-2 offset-md-2 px-0">
-    <%= form.label :category_albums, t(".categories") %>
-    <%= form.select :category_ids, categories_reference_collection, {},
-      {class: "form-control", multiple: true} %>
+  <div class="form-row">
+    <div class="field form-group offset-md-2 col-md-4 px-0">
+      <%= form.label :cover, t(".cover") %><br>
+      <%= form.file_field :cover %><br><br>
+      <%= rescue_image admin_album.cover, "img-fluid img-thumbnail" %>
+    </div>
+
+    <div class="field form-group col-md-2">
+      <%= form.label :category_albums, t(".categories") %>
+      <%= form.select :category_ids, categories_reference_collection, {},
+        {class: "form-control", multiple: true} %>
+    </div>
   </div>
 
   <div class="offset-md-2">

@@ -164,13 +164,14 @@ en:
   categories:
     index:
       categories: Categories
+    show:
+      albums: Albums
   home_page:
     index:
       home: Home page
       categories: Categories
       artists: Artists
-    latest_albums:
-      title: Latest albums
+      latest_albums: Latest albums
     featured_tracks:
       tracks: Tracks
       hot: Hot

@@ -164,13 +164,14 @@ vi:
   categories:
     index:
       categories: Chủ đề
+    show:
+      albums: Albums
   home_page:
     index:
       home: Trang chủ
       categories: Chủ đề
       artists: Nghệ sĩ
-    latest_albums:
-      title: Album mới nhất
+      latest_albums: Album mới nhất
     featured_tracks:
       tracks: Bài hát
       hot: Hot

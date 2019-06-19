@@ -3,11 +3,16 @@
 
 <div class="container">
   <%= render "featured_tracks" %>
-  <%= render "latest_albums" %>
+  <h3 class="my-4"><%= t ".latest_albums" %></h3>
+  <div class="row">
+    <%= render @support.class_method_helper Album.name, :latest_with_limit,
+      Settings.album.featured_list %>
+  </div>
 
   <h3 class="my-4"><%= t ".categories" %></h3>
   <div class="row">
-    <%= render @support.take_helper Category.name, Settings.category.featured_list %>
+    <%= render @support.class_method_helper Category.name, :take,
+      Settings.category.featured_list %>
   </div>
 
   <h3 class="my-4"><%= t ".artists" %></h3>

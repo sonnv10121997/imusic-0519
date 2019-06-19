@@ -1,5 +1,5 @@
 class Supports::HomePage
-  def take_helper model, list
-    model.constantize.take list
+  def class_method_helper model, method, list
+    model.constantize.send method, list
   end
 end

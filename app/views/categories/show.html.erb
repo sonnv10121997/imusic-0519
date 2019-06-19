@@ -1,0 +1,9 @@
+<div class="container"><br>
+  <h3 class="my-4"><%= t ".albums" %></h3>
+
+  <div class="row">
+    <%= render @category_albums %>
+  </div>
+
+  <%= paginate @category_albums %>
+</div>
