@@ -1,11 +1,11 @@
 <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
   <div class="card h-100">
-    <%= link_to "#" do %>
-      <img class="card-img-top" src="http://placehold.it/700x400">
+    <%= link_to category do %>
+      <%= rescue_image category.cover, "img-fluid" %>
     <% end %>
     <div class="card-body">
       <h4 class="card-title center_text no_margin">
-        <%= link_to "Category", "#" %>
+        <%= link_to category.name, category, class: "card-link" %>
       </h4>
     </div>
   </div>

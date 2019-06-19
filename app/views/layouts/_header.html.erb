@@ -5,7 +5,7 @@
       <ul class="navbar-nav ml-auto">
         <li><%= link_to t(".hot"), "#", class: "nav-link" %></li>
         <li><%= link_to t(".top"), "#", class: "nav-link" %></li>
-        <li><%= link_to t(".categories"), "#", class: "nav-link" %></li>
+        <li><%= link_to t(".categories"), categories_path, class: "nav-link" %></li>
         <li><%= link_to t(".artists"), "#", class: "nav-link" %></li>
         <% if user_signed_in? %>
           <li><%= link_to t(".favourites"), "#", class: "nav-link" %></li>

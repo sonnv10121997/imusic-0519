@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       end
       root "/admin#index"
     end
+    resources :categories, only: %i(index show)
     post "/rate", to: "rate#create", as: "rate"
     root "home_page#index"
   end

@@ -135,6 +135,7 @@ en:
       index:
         categories: Categories
         name: Name
+        cover: Cover
       create:
         created: Category was successfully created!
       update:
@@ -150,6 +151,7 @@ en:
         back: Back
       form:
         name: Name
+        cover: Cover
     sidebar:
       home_page: Home page
       dashboard: Dashboard
@@ -159,6 +161,9 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+  categories:
+    index:
+      categories: Categories
   home_page:
     index:
       home: Home page

@@ -135,6 +135,7 @@ vi:
       index:
         categories: Chủ đề
         name: Tên
+        cover: Ảnh bìa
       create:
         created: Tạo chủ đề thành công!
       update:
@@ -150,6 +151,7 @@ vi:
         back: Trở lại
       form:
         name: Tên
+        cover: Ảnh bìa
     sidebar:
       home_page: Trang chủ
       dashboard: Bảng điều khiển
@@ -159,6 +161,9 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  categories:
+    index:
+      categories: Chủ đề
   home_page:
     index:
       home: Trang chủ
