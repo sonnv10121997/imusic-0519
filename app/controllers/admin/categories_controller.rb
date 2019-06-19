@@ -50,6 +50,6 @@ class Admin::CategoriesController < AdminController
   end
 
   def admin_category_params
-    params.require(:admin_category).permit :name
+    params.require(:admin_category).permit Category::CATEGORY_PARAMS
   end
 end
