@@ -200,3 +200,18 @@ vi:
       admin_page: Trang quản trị
     footer:
       copyright_html: "&copy; Bản quyền thuộc về IMusic 2019"
+  errors:
+    messages:
+      content_type_invalid: không đúng kiểu định dạng
+      file_size_out_of_range: "%{file_size} là quá dung lượng cho phép"
+      limit_out_of_range: quá số lượng cho phép
+      dimension_min_inclusion: phải lớn hơn hoặc bằng %{width} x %{height} pixel.
+      dimension_max_inclusion: phải nhỏ hơn hoặc bằng %{width} x %{height} pixel.
+      dimension_width_inclusion: chiều rộng không nằm trong khoảng từ %{min} đến %{max} pixel.
+      dimension_height_inclusion: chiều dài không nằm trong khoảng từ %{min} đến %{max} pixel.
+      dimension_width_greater_than_or_equal_to: chiều rộng phải lớn hơn hoặc bằng %{length} pixel.
+      dimension_height_greater_than_or_equal_to: chiều dài phải lớn hơn hoặc bằng %{length} pixel.
+      dimension_width_less_than_or_equal_to: chiều rộng phải nhỏ hơn hoặc bằng %{length} pixel.
+      dimension_height_less_than_or_equal_to: chiều dài phải nhỏ hơn hoặc bằng %{length} pixel.
+      dimension_width_equal_to: chiều rộng phải bằng %{length} pixel.
+      dimension_height_equal_to: chiều dài phải bằng %{length} pixel.

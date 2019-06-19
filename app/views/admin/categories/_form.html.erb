@@ -11,5 +11,11 @@
       autocomplete: "off" %>
   </div>
 
+  <div class="field form-group col-md-4 px-0">
+    <%= form.label :cover, t(".cover") %><br>
+    <%= form.file_field :cover %><br><br>
+    <%= rescue_image admin_category.cover, "img-fluid img-thumbnail" %>
+  </div>
+
   <%= form.submit class: "btn btn-primary" %>
 <% end %>
