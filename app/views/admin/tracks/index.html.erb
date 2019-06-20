@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= t ".title" %></th>
+      <th><%= t ".cover" %></th>
       <th><%= t ".year" %></th>
       <th><%= t ".artist" %></th>
       <th><%= t ".album" %></th>
@@ -17,6 +18,7 @@
     <% @admin_tracks.each do |track| %>
       <tr>
         <td><%= track.title %></td>
+        <td class="w_20"><%= rescue_image track.cover, "img-fluid" %></td>
         <td><%= track.year %></td>
         <td><%= track.artist_name %></td>
         <td><%= track.album_name %></td>
