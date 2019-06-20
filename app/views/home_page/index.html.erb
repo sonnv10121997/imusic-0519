@@ -17,8 +17,7 @@
 
   <h3 class="my-4"><%= t ".artists" %></h3>
   <div class="row">
-    <% Settings.artist.featured_list.times do %>
-      <%= render "artists/artist" %>
-    <% end %>
+    <%= render @support.class_method_helper Artist.name, :take,
+      Settings.artist.featured_list %>
   </div>
 </div>

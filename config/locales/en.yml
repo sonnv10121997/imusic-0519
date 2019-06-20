@@ -117,6 +117,7 @@ en:
       index:
         title: Artists
         name: Name
+        avatar: Avatar
         description: Description
         dob: Date of birth
         country: Country
@@ -133,6 +134,7 @@ en:
         faild_to_destroyed: Artist was unsuccessfully destroyed!
       form:
         name: Name
+        avatar: Avatar
         description: Description
         dob: Date of birth
         country: Country
@@ -166,6 +168,12 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+  artists:
+    show:
+      dob: "Date of birth: %{date}"
+      country: "Country: %{country}"
+      albums: Albums
+      tracks: Tracks
   albums:
     show:
       categories: "Categories: %{categories}"
