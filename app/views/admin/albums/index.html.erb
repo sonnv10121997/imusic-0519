@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= t ".name" %></th>
+      <th><%= t ".cover" %></th>
       <th><%= t ".year" %></th>
       <th><%= t ".artist" %></th>
       <th><%= t ".categories" %></th>
@@ -17,13 +18,10 @@
     <% @admin_albums.each do |album| %>
       <tr>
         <td><%= album.name %></td>
+        <td class="w_20"><%= rescue_image album.cover, "img-fluid" %></td>
         <td><%= album.year %></td>
         <td><%= album.artist_name %></td>
-        <td>
-          <% album.categories.each do |category| %>
-            <%= category.name %>
-          <% end %>
-        </td>
+        <td><%= categories_name_join_helper album.categories %></td>
         <td><%= link_to t("admin.action.edit"), edit_admin_album_path(album),
           class: "card-link" %></td>
         <td><%= link_to t("admin.action.delete"), admin_album_path(album),

@@ -1,0 +1,13 @@
+<div class="small_track row mx-0 my-3 px-5 py-2 text-gray-600 align-items-center">
+  <div class="col-md-7 d-flex px-0">
+    <%= fa_icon "play" %>
+    <h6 id="title" class="no_margin ml-4 mr-5"><%= track.title %></h6>
+  </div>
+
+  <small id="artist" class="col-md-5 px-0">
+    <%= link_to track.artist_name, "#", class: "text-gray-600" %>
+  </small>
+  <span id="year" class="d-none"><%= track.year %></span>
+  <%= rescue_image track.cover, "d-none" %>
+  <%= rescue_audio track.data, "d-none" %>
+</div>
