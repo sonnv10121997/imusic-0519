@@ -9,12 +9,19 @@ user:
   password:
     minimum: 6
 track:
+  small_list: 5
   featured_list: 3
   title:
     max_length: 30
   year:
     minimum: 0
     start: 1800
+  cover:
+    file_type: ["image/png", "image/jpg", "image/jpeg"]
+    max_size: 1
+  data:
+    file_type: "audio/mpeg"
+    max_size: 30
 album:
   list: 16
   featured_list: 8

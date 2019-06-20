@@ -1,5 +1,5 @@
 class Track < ApplicationRecord
-  TRACK_PARAMS = %i(title year artist_id album_id).freeze
+  TRACK_PARAMS = %i(title year cover data artist_id album_id).freeze
 
   belongs_to :artist
   belongs_to :album
@@ -7,6 +7,8 @@ class Track < ApplicationRecord
   has_many :favourites, as: :favourable, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :lyrics, dependent: :destroy
+  has_one_attached :cover
+  has_one_attached :data
 
   delegate :name, to: :artist, prefix: true
   delegate :name, to: :album, prefix: true
@@ -17,4 +19,8 @@ class Track < ApplicationRecord
     greater_than: Settings.track.year.minimum}
   validates :artist, presence: true
   validates :album, presence: true
+  validates :cover, attached: true, content_type: Settings.track.cover.file_type,
+    size: {less_than: Settings.track.cover.max_size.megabytes}
+  validates :data, attached: true, content_type: Settings.track.data.file_type,
+    size: {less_than: Settings.track.data.max_size.megabytes}
 end

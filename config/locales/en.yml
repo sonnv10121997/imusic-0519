@@ -65,6 +65,7 @@ en:
     tracks:
       index:
         tracks: List of Tracks
+        cover: Cover
         title: Track's title
         year: Release year
         artist: Artist
@@ -82,12 +83,15 @@ en:
         faild_to_destroyed: Track was unsuccessfully destroyed!
       form:
         title: Track's title
+        cover: Cover
+        data: Data
         year: Release year
         artist: Artist
-        Album: Album
+        album: Album
     albums:
       index:
         title: List of Albums
+        cover: Cover
         name: Album name
         year: Release year
         artist: Artist
@@ -105,6 +109,7 @@ en:
         faild_to_destroyed: Album was unsuccessfully destroyed!
       form:
         name: Album name
+        cover: Cover
         year: Release year
         artist: Artist
         categories: Categories
@@ -161,6 +166,10 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+  albums:
+    show:
+      categories: "Categories: %{categories}"
+      release: "Release: %{year}"
   categories:
     index:
       categories: Categories

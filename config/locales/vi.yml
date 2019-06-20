@@ -65,6 +65,7 @@ vi:
     tracks:
       index:
         tracks: Danh sách bài hát
+        cover: Ảnh bìa
         title: Tiêu đề bài hát
         year: Năm phát hành
         artist: Nghệ sĩ
@@ -82,12 +83,15 @@ vi:
         faild_to_destroyed: Xóa bài hát không thành công!
       form:
         title: Tiêu đề bài hát
+        cover: Ảnh bìa
+        data: Dữ liệu
         year: Năm phát hành
         artist: Nghệ sĩ
         album: Album
     albums:
       index:
         title: Danh sách Album
+        cover: Ảnh bìa
         name: Tên album
         year: Năm phát hành
         artist: Nghệ sĩ
@@ -105,6 +109,7 @@ vi:
         faild_to_destroyed: Xóa Album không thành công!
       form:
         name: Tên album
+        cover: Ảnh bìa
         year: Năm phát hành
         artist: Nghệ sĩ
         categories: Chủ đề
@@ -161,6 +166,10 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  albums:
+    show:
+      categories: "Thể loại: %{categories}"
+      release: "Phát hành: %{year}"
   categories:
     index:
       categories: Chủ đề
