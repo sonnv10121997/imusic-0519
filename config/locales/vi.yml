@@ -169,6 +169,8 @@ vi:
       tracks: Bài hát
       users: Người dùng
   artists:
+    index:
+      artists: Nghệ sĩ
     show:
       dob: "Ngày sinh: %{date}"
       country: "Quốc gia: %{country}"

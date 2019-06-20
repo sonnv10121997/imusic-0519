@@ -169,6 +169,8 @@ en:
       tracks: Tracks
       users: Users
   artists:
+    index:
+      artists: Artists
     show:
       dob: "Date of birth: %{date}"
       country: "Country: %{country}"
