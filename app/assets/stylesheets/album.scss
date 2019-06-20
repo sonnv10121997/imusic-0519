@@ -1,0 +1,30 @@
+@import "color";
+
+.album_info {
+  background-color: $album_player_color;
+}
+
+.album_name_artist {
+  color: white;
+}
+
+.small_track:hover {
+  cursor: pointer;
+  background-color: $small_track_hover;
+}
+
+.small_track_info {
+  align-items: center;
+  bottom: 171px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -91px;
+  position: relative;
+}
+
+.audio_player {
+  background-color: $audio_player_background;
+  bottom: 54px;
+  margin-bottom: -54px;
+  position: relative;
+}
