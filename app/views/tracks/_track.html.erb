@@ -1,0 +1,9 @@
+<div class="track_info col-md-6">
+  <div class="album_thumbnail"><%= rescue_image track.cover %></div>
+
+  <div class="track_metadata">
+    <small class="music-published-date"><%= track.year %></small>
+    <h6 class="no_margin"><%= track.title %></h6>
+    <small><%= link_to track.artist_name, track.artist, class: "card-link" %></small>
+  </div>
+</div>

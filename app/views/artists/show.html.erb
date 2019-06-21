@@ -1,0 +1,25 @@
+<% provide :title, @support.artist.name %>
+
+<div class="container"><br>
+  <div class="d-flex align-items-center">
+    <%= rescue_image @support.artist.avatar, "artist_thumbnail card-img-top" %>
+
+    <div class="artist_info ml-5">
+      <h3><%= @support.artist.name %></h3>
+      <span><%= t ".dob", date: @support.artist.dob %></span><br>
+      <span><%= t ".country", country: @support.artist.country %></span>
+    </div>
+  </div>
+
+  <h3 class="my-5"><%= t ".albums" %></h3>
+  <div class="row">
+    <%= render partial: "albums/album", collection: @support.artist_albums %>
+    <%= paginate @support.artist_albums %>
+  </div>
+
+  <h3 class="my-5"><%= t ".tracks" %></h3>
+  <div class="row">
+    <%= render partial: "tracks/track", collection: @support.artist_tracks %>
+    <%= paginate @support.artist_tracks %>
+  </div>
+</div>

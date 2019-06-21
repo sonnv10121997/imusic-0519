@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= t ".name" %></th>
+      <th><%= t ".avatar" %></th>
       <th><%= t ".description" %></th>
       <th><%= t ".dob" %></th>
       <th><%= t ".country" %></th>
@@ -16,8 +17,13 @@
   <tbody>
     <% @admin_artists.each do |artist| %>
       <tr>
-        <td><%= artist.name %></td>
-        <td><%= artist.description %></td>
+        <td class="w_11"><%= artist.name %></td>
+        <td class="w_11">
+          <%= rescue_image artist.avatar, "img-fluid" %>
+        </td>
+        <td class="w_42">
+          <%= simple_format limit_des_helper(artist.description) %>
+        </td>
         <td><%= artist.dob %></td>
         <td><%= artist.country %></td>
         <td><%= link_to t("admin.action.edit"), edit_admin_artist_path(artist),

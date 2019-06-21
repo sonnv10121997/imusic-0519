@@ -117,6 +117,7 @@ vi:
       index:
         title: Nghệ sĩ
         name: Tên
+        avatar: Ảnh đại diện
         description: Giới thiệu
         dob: Ngày sinh
         country: Quốc gia
@@ -133,6 +134,7 @@ vi:
         faild_to_destroyed: Xóa Nghệ sĩ không thành công!
       form:
         name: Tên
+        avatar: Ảnh đại diện
         description: Giới thiệu
         dob: Ngày sinh
         country: Quốc gia
@@ -166,6 +168,12 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  artists:
+    show:
+      dob: "Ngày sinh: %{date}"
+      country: "Quốc gia: %{country}"
+      albums: Albums
+      tracks: Bài hát
   albums:
     show:
       categories: "Thể loại: %{categories}"
