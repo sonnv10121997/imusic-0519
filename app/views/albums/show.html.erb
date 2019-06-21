@@ -6,12 +6,13 @@
 
     <div class="album_info col-md-6 px-0">
       <div class="row mx-0 d-flex align-items-center">
-        <div class="w-auto album_name_artist px-5 py-4">
-          <h3><%= @support.album.name %></h3>
-          <h4><%= @support.album.artist_name %></h4>
+        <div class="col-md-6 album_name_artist px-4 pt-4">
+          <h4><%= @support.album.name %></h4>
+          <h5><%= link_to @support.album.artist_name, @support.album.artist,
+            class: "text-white" %></h5>
         </div>
 
-        <div class="w-auto py-4 text-gray-600">
+        <div class="col-md-6 text-gray-600 pt-4">
           <h6><%== t ".categories", categories: join_categories_with_link(@support
             .album.categories, "text-gray-600") %></h6>
           <h6><%= t ".release", year: @support.album.year %></h6>
@@ -23,7 +24,7 @@
     </div>
   </div>
 
-  <div class="small_track_info offset-6 px-5 text-gray-600 mt-4" id="now_playing">
+  <div class="small_track_info offset-6 px-4 text-gray-600 mt-4" id="now_playing">
     <div class="album_thumbnail w_m_67">
       <%= rescue_image @support.album_tracks.first.cover %>
     </div>
@@ -33,7 +34,7 @@
       <h6 id="title" class="no_margin">
         <%= @support.album_tracks.first.title %></h6>
       <small id="artist"><%= link_to @support.album_tracks.first.artist_name,
-        "#", class: "text-gray-600" %></small>
+        @support.album_tracks.first.artist, class: "text-gray-600" %></small>
     </div>
   </div>
 

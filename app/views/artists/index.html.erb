@@ -1,0 +1,9 @@
+<div class="container"><br>
+  <h3 class="my-4"><%= t ".artists" %></h3>
+
+  <div class="row">
+    <%= render @artists %>
+  </div>
+
+  <%= paginate @artists %>
+</div>

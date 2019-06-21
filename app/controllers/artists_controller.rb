@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   before_action :find_artist, only: :show
 
+  def index
+    @artists = Artist.page(params[:page]).per Settings.artist.list
+  end
+
   def show
     @support = Supports::Artist.new artist, params
   end
