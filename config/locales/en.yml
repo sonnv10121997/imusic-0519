@@ -168,6 +168,10 @@ en:
       lyrics: Lyrics
       tracks: Tracks
       users: Users
+  tracks:
+    show:
+      categories: "Categories: %{categories}"
+      album: "Album:"
   artists:
     index:
       artists: Artists
