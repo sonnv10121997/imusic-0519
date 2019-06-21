@@ -1,3 +1,5 @@
+<% provide :title, @support.album.name %>
+
 <div class="container"><br>
   <div class="row mx-0">
     <div class="col-md-6 px-0">
@@ -25,14 +27,17 @@
   </div>
 
   <div class="small_track_info offset-6 px-4 text-gray-600 mt-4" id="now_playing">
-    <div class="album_thumbnail w_m_67">
-      <%= rescue_image @support.album_tracks.first.cover %>
+    <div id="cover" class="album_thumbnail w_m_67">
+      <%= link_to @support.album_tracks.first do %>
+        <%= rescue_image @support.album_tracks.first.cover %>
+      <% end %>
     </div>
     <div class="track_metadata">
       <small id="year" class="music-published-date">
         <%= @support.album_tracks.first.year %></small>
       <h6 id="title" class="no_margin">
-        <%= @support.album_tracks.first.title %></h6>
+        <%= link_to @support.album_tracks.first.title, @support.album_tracks.first,
+          class: "text-gray-600" %></h6>
       <small id="artist"><%= link_to @support.album_tracks.first.artist_name,
         @support.album_tracks.first.artist, class: "text-gray-600" %></small>
     </div>

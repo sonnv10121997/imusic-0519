@@ -15,12 +15,13 @@ $(document).on('turbolinks:load', function () {
 
   $(document).on('click', '.small_track', function() {
     var audio = $(this).children('audio');
-    var image = $(this).children('img');
+    var image = $(this).children('#cover').html();
     var track_year = $(this).find('#year').html();
     var track_artist = $(this).find('#artist').html();
     var track_title = $(this).find('#title').html();
 
-    $('#now_playing').find('img')[0].src = image[0].src;
+    $('#now_playing').find('#cover').html(image);
+    $('#now_playing').find('#cover img').removeClass('d-none');
     $('#now_playing').find('#year').html(track_year);
     $('#now_playing').find('#artist').html(track_artist);
     $('#now_playing').find('#title').html(track_title);

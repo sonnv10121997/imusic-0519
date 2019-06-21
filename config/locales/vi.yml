@@ -168,6 +168,10 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  tracks:
+    show:
+      categories: "Chủ đề: %{categories}"
+      album: "Album:"
   artists:
     index:
       artists: Nghệ sĩ

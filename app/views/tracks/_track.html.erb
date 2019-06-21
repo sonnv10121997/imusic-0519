@@ -1,9 +1,15 @@
 <div class="track_info col-md-6">
-  <div class="album_thumbnail"><%= rescue_image track.cover %></div>
+  <div class="album_thumbnail">
+    <%= link_to track do %>
+      <%= rescue_image track.cover %>
+    <% end %>
+  </div>
 
   <div class="track_metadata">
     <small class="music-published-date"><%= track.year %></small>
-    <h6 class="no_margin"><%= track.title %></h6>
-    <small><%= link_to track.artist_name, track.artist, class: "card-link" %></small>
+    <h6 class="no_margin"><%= link_to track.title, track,
+      class: "text-gray-900" %></h6>
+    <small><%= link_to track.artist_name, track.artist,
+      class: "text-gray-900" %></small>
   </div>
 </div>
