@@ -8,6 +8,9 @@ user:
   featured_list: 8
   password:
     minimum: 6
+  avatar:
+    file_type: ["image/png", "image/jpg", "image/jpeg"]
+    max_size: 1
 track:
   list: 8
   small_list: 4

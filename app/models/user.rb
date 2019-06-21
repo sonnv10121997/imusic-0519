@@ -10,11 +10,14 @@ class User < ApplicationRecord
   has_many :lyrics, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :favourites, dependent: :destroy
+  has_one_attached :avatar
 
   validates :name, length: {maximum: Settings.user.name.max_length},
     presence: true, uniqueness: true
   validates :password, length: {minimum: Settings.user.password.minimum},
     on: :update, allow_nil: true
+  validates :avatar, content_type: Settings.user.avatar.file_type,
+    size: {less_than: Settings.user.avatar.max_size.megabytes}
 
   class << self
     def from_omniauth auth
