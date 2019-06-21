@@ -1,0 +1,6 @@
+<div id="comment_<%= comment.id %>" class="row">
+  <div class="col mb-4 comment">
+    <%= rescue_user_avatar comment.user_avatar, "user_thumbnail img-fluid", "4x" %>
+    <%= render "comments/comment_data", comment: comment %>
+  </div>
+</div>

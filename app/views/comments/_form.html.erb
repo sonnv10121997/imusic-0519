@@ -1,0 +1,12 @@
+<%= form_for comment, remote: true, html: {class: "w-100 pl-4"} do |form| %>
+  <div class="form-group">
+    <%= form.text_area :content, class: "form-control" %>
+  </div>
+
+  <%= form.hidden_field :track_id %>
+  <%= hidden_field_tag "comment[user_id]", current_user.id %>
+  <%= form.submit class: "btn btn-primary mb-4" %>
+  <% if form.object.persisted? %>
+    <%= link_to t(".cancel"), comment, remote: true, class: "btn btn-secondary mb-4" %>
+  <% end %>
+<% end %>

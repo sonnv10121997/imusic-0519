@@ -19,7 +19,9 @@
 
   <h3 class="my-5"><%= t ".tracks" %></h3>
   <div class="row">
-    <%= render partial: "tracks/track", collection: @support.artist_tracks %>
+    <% @support.artist_tracks.each do |track| %>
+      <div class="col-md-4"><%= render track %></div>
+    <% end %>
     <%= paginate @support.artist_tracks %>
   </div>
 </div>

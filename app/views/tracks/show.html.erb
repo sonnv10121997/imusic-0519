@@ -1,36 +1,66 @@
-<% provide :title, @track.title %>
+<% provide :title, @support.track.title %>
 
 <div class="container"><br>
   <div class="row mx-0">
     <div class="col-md-3 px-0">
-      <%= rescue_image @track.cover, "img-fluid" %>
+      <%= rescue_image @support.track.cover, "img-fluid" %>
     </div>
 
     <div class="col-md-9 px-0 album_info">
       <div class="row mx-0 px-4 pt-3 text-white">
-        <small><%= @track.year %></small>
+        <small><%= @support.track.year %></small>
       </div>
       <div class="row mx-0 px-4 text-white">
-        <h4><%= @track.title %></h4>
+        <h4><%= @support.track.title %></h4>
       </div>
       <div class="row mx-0 px-4 pb-2">
-        <h6><%= link_to @track.artist_name, @track.artist,
+        <h6><%= link_to @support.track.artist_name, @support.track.artist,
           class: "text-white" %></h6>
       </div>
       <div class="row mx-0 px-4 text-gray-600">
         <h6>
           <%= t ".album" %>
-          <%= link_to @track.album_name, @track.album, class: "text-gray-600" %>
+          <%= link_to @support.track.album_name, @support.track.album,
+            class: "text-gray-600" %>
         </h6>
       </div>
       <div class="row mx-0 px-4 text-gray-600">
-        <h6><%== t ".categories", categories: join_categories_with_link(@track
-          .album.categories, "text-gray-600") %></h6>
+        <h6><%== t ".categories", categories: join_categories_with_link(@support
+          .track.album.categories, "text-gray-600") %></h6>
       </div>
     </div>
   </div>
 
   <div class="audio_player offset-md-3">
-    <%= rescue_audio @track.data, "w-full d-block" %>
+    <%= rescue_audio @support.track.data, "w-full d-block" %>
+  </div><hr class="mt-5 mb-4">
+
+  <div class="row">
+    <div class="col-md-8">
+      <h4 class="pb-3"><%= t ".lyrics" %></h4>
+      <div class="pb-3 text-gray-600">
+        <%== contributor_helper @support.track.approved_lyric %></div>
+      <div><%= simple_format lyric_helper(@support.track.approved_lyric) %></div>
+      <hr class="my-4">
+
+      <h4 class="mb-4"><%= t ".total_comment", count: number_with_delimiter(@support
+        .track.comments.size) %></h4>
+      <div class="d-flex">
+        <%= rescue_user_avatar current_user.avatar, "user_thumbnail img-fluid", "4x" %>
+        <% if user_signed_in? %>
+          <%= render "comments/form", comment: @support.build_comments,
+            track: @support.track %>
+        <% end %>
+      </div>
+
+      <div id="comments">
+        <%= render partial: "comments/comment", collection: @support.track_comments %>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h4 class="pb-3"><%= t ".latest_tracks" %></h4>
+      <%= render partial: "tracks/track", collection: @support.latest_tracks %>
+    </div>
   </div>
 </div>

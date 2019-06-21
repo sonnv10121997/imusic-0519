@@ -1,0 +1,3 @@
+$('#comment_<%= @comment.id %> .comment').append('<%= j render "comments/comment_data",
+  comment: @comment %>');
+$('#edit_comment_<%= @comment.id %>').remove();
