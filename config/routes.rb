@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       end
       root "/admin#index"
     end
+    resources :comments, only: %i(show create edit update destroy)
     resources :categories, only: %i(index show)
     resources :artists, only: %i(index show)
     resources :albums, only: :show

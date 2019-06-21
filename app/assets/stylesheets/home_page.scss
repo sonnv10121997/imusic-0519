@@ -46,6 +46,12 @@ img.user_x_thumbnail {
   border-radius: 3px;
 }
 
+.user_thumbnail {
+  max-width: 65px;
+  max-height: 65px;
+  border-radius: 33px;
+}
+
 .hr_text_container {
   border-bottom: 1px solid;
   height: 12px;

@@ -7,6 +7,8 @@ class Track < ApplicationRecord
   has_many :favourites, as: :favourable, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :lyrics, dependent: :destroy
+  has_one :approved_lyric, ->{where approved: true}, dependent: :destroy,
+    class_name: Lyric.name, foreign_key: :track_id
   has_one_attached :cover
   has_one_attached :data
 
@@ -23,4 +25,6 @@ class Track < ApplicationRecord
     size: {less_than: Settings.track.cover.max_size.megabytes}
   validates :data, attached: true, content_type: Settings.track.data.file_type,
     size: {less_than: Settings.track.data.max_size.megabytes}
+
+  scope :latest_with_limit, ->(limit) {order(created_at: :desc).limit limit}
 end

@@ -11,6 +11,9 @@ user:
   avatar:
     file_type: ["image/png", "image/jpg", "image/jpeg"]
     max_size: 1
+comment:
+  list: 30
+  datetime_format: "%H:%M %d/%m/%y"
 track:
   list: 8
   small_list: 4

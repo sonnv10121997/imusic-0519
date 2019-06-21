@@ -169,10 +169,22 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  comments:
+    comment_data:
+      edit: Sửa
+      delete: Xóa
+    form:
+      edit: Sửa
+      cancel: Hủy
   tracks:
     show:
       categories: "Chủ đề: %{categories}"
       album: "Album:"
+      total_comment: "%{count} bình luận"
+      lyrics: Lời bài hát
+      no_lyrics: Chưa có lời bài hát cho bài hát này!
+      contributor: Đóng góp bởi %{user}
+      latest_tracks: Bài hát mới nhất
   artists:
     index:
       artists: Nghệ sĩ

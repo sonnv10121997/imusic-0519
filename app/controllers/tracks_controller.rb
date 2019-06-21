@@ -1,7 +1,9 @@
 class TracksController < ApplicationController
   before_action :find_track, only: :show
 
-  def show; end
+  def show
+    @support = Supports::Track.new track, params
+  end
 
   private
 
