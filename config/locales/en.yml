@@ -20,6 +20,7 @@ en:
     users:
       index:
         title: List of Users
+        avatar: Avatar
         name: Name
         email: Email
         confirmed_at: Confirmed_at

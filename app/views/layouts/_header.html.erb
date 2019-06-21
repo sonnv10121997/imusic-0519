@@ -12,7 +12,7 @@
           <li class="nav-item dropdown">
             <%= link_to "#", id: "navbarDropdown", data: {toggle: "dropdown"},
               class: "nav-link dropdown-toggle" do %>
-              <img class="user_x_thumbnail" src="http://placehold.it/25x25">
+              <%= rescue_user_avatar current_user.avatar, "user_x_thumbnail" %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-right">
               <% if current_user.admin? %>

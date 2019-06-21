@@ -13,4 +13,9 @@ module ApplicationHelper
     content_tag :audio, nil, src: url_for(audio), controls: true,
       preload: "auto", class: css_class, id: id
   end
+
+  def rescue_user_avatar avatar, css_class = nil, fa_css_class = nil
+    return fa_icon "user-circle-o #{fa_css_class}" unless avatar.attached?
+    content_tag :image, nil, src: url_for(avatar), class: css_class
+  end
 end

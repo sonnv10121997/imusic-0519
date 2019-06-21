@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= t ".name" %></th>
+      <th><%= t ".avatar" %></th>
       <th><%= t ".email" %></th>
       <th><%= t ".confirmed_at" %></th>
       <th><%= t ".confirmation_token" %></th>
@@ -17,6 +18,9 @@
     <% @admin_users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
+        <td class="w_11">
+          <%= rescue_user_avatar user.avatar, "img-fluid", "5x" %>
+        </td>
         <td><%= user.email %></td>
         <td><%= user.confirmed_at %></td>
         <td><%= user.confirmation_token %></td>

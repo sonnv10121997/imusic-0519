@@ -21,6 +21,7 @@ vi:
       index:
         title: Danh sách người dùng
         name: Tên
+        avatar: Ảnh đại diện
         email: Email
         confirmed_at: Xác nhận lúc
         confirmation_token: Mã xác nhận
