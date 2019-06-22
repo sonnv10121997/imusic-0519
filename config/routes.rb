@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       %i(users lyrics tracks albums artists categories).each do |model|
         resources model, except: :show
       end
+      get "/hot", to: "hot#index"
+      patch "/hot", to: "hot#update"
       root "/admin#index"
     end
     resources :comments, only: %i(show create edit update destroy)

@@ -1,8 +1,11 @@
 <% provide :title, t(".home") %>
-<%= render "featured_slides" %>
+
+<%= render "featured_slides", hot_albums_tracks: @support.find_hot(Album.name,
+  Track.name) %>
 
 <div class="container">
   <%= render "featured_tracks" %>
+
   <h3 class="my-4"><%= t ".latest_albums" %></h3>
   <div class="row">
     <%= render @support.class_method_helper Album.name, :latest_with_limit,

@@ -1,37 +1,38 @@
 <section>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="hot" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0"
-        class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <% hot_albums_tracks.each_with_index do |hot, idx| %>
+        <li data-target="#hot" data-slide-to="<%= idx %>"
+          class="<%= idx.zero? ? "active" : "" %>"></li>
+      <% end %>
     </ol>
+
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active"
-        style="background-image: url('http://placehold.it/700x400')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Hot Track</h3>
+      <% hot_albums_tracks.each_with_index do |hot, idx| %>
+        <div class="carousel-item hot_carousel <%= idx.zero? ? "active" : "" %>"
+          style="background-image: url(<%= url_for hot.cover %>)">
+          <%= link_to hot, class: "stretched-link" do %>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>
+                <% if hot.is_a? Album %>
+                  <%= hot.name %>
+                <% elsif hot.is_a? Track %>
+                  <%= hot.title %>
+                <% end %> - <%= hot.artist_name %>
+              </h3>
+            </div>
+          <% end %>
         </div>
-      </div>
-      <div class="carousel-item"
-        style="background-image: url('http://placehold.it/700x400')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Hot Track</h3>
-        </div>
-      </div>
-      <div class="carousel-item"
-        style="background-image: url('http://placehold.it/700x400')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>Hot Track</h3>
-        </div>
-      </div>
+      <% end %>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators"
+
+    <a class="carousel-control-prev" href="#hot"
       role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only"></span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators"
+
+    <a class="carousel-control-next" href="#hot"
       role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only"></span>

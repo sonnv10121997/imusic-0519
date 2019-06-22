@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_134726) do
+ActiveRecord::Schema.define(version: 2019_06_22_111005) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_134726) do
     t.bigint "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hot", default: false
     t.index ["artist_id"], name: "index_albums_on_artist_id"
   end
 
@@ -146,6 +147,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_134726) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "album_id"
+    t.boolean "hot", default: false
     t.index ["album_id"], name: "index_tracks_on_album_id"
     t.index ["artist_id"], name: "index_tracks_on_artist_id"
   end

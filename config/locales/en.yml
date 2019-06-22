@@ -8,9 +8,17 @@ en:
       delete: Delete
       confirm: Are you sure?
       back: Back
+    hot:
+      index:
+        title: Pin hot albums and tracks
+        album: Pin hot Album
+        track: Pin hot Track
+      update:
+        updated: Pin hot Albums and Tracks successfully!
     index:
       access_denied: You don't have permission to access this content!
       dashboard: Dashboard
+      hot: Hot
       albums: Albums
       artists: Aritsts
       categories: Categories
@@ -163,6 +171,7 @@ en:
     sidebar:
       home_page: Home page
       dashboard: Dashboard
+      hot: Hot
       albums: Albums
       artists: Aritsts
       categories: Categories

@@ -8,9 +8,17 @@ vi:
       delete: Xóa
       confirm: Bạn có chắc muốn xóa?
       back: Quay lại
+    hot:
+      index:
+        title: Ghim album và bài hát hot
+        album: Ghim Album hot
+        track: Ghim Bài hát hot
+      update:
+        updated: Ghim album và bài hát thành công!
     index:
       access_denied: Bạn không có quyền truy cập nội dung này!
       dashboard: Bảng điều khiển
+      hot: Hot
       albums: Albums
       artists: Nghệ sĩ
       categories: Chủ đề
@@ -163,6 +171,7 @@ vi:
     sidebar:
       home_page: Trang chủ
       dashboard: Bảng điều khiển
+      hot: Hot
       albums: Albums
       artists: Nghệ sĩ
       categories: Chủ đề

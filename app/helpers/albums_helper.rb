@@ -11,4 +11,8 @@ module AlbumsHelper
   def categories_name_join_helper categories
     categories.pluck(:name).join ", "
   end
+
+  def hot_album_ids
+    Album.where(hot: true).pluck :id
+  end
 end

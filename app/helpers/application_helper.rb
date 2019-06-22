@@ -18,4 +18,8 @@ module ApplicationHelper
     return fa_icon "user-circle-o #{fa_css_class}" unless avatar.attached?
     content_tag :image, nil, src: url_for(avatar), class: css_class
   end
+
+  def hot_albums_tracks_size
+    hot_album_ids.size + hot_track_ids.size
+  end
 end
