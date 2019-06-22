@@ -29,6 +29,7 @@ track:
   data:
     file_type: "audio/mpeg"
     max_size: 30
+  rateable: quality
 album:
   list: 16
   featured_list: 8
@@ -40,6 +41,7 @@ album:
   cover:
     file_type: ["image/png", "image/jpg", "image/jpeg"]
     max_size: 1
+  rateable: quality
 category:
   list: 16
   featured_list: 8

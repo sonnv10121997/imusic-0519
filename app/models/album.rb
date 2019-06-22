@@ -1,6 +1,8 @@
 class Album < ApplicationRecord
   ALBUM_PARAMS = [:name, :year, :artist_id, :cover, category_ids: []].freeze
 
+  ratyrate_rateable Settings.album.rateable
+
   belongs_to :artist
 
   has_many :category_albums, dependent: :destroy

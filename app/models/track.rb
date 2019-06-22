@@ -1,6 +1,8 @@
 class Track < ApplicationRecord
   TRACK_PARAMS = %i(title year cover data artist_id album_id).freeze
 
+  ratyrate_rateable Settings.track.rateable
+
   belongs_to :artist
   belongs_to :album
 

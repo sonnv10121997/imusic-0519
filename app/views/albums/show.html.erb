@@ -7,17 +7,22 @@
     </div>
 
     <div class="album_info col-md-6 px-0">
-      <div class="row mx-0 d-flex align-items-center">
-        <div class="col-md-6 album_name_artist px-4 pt-4">
+      <div class="row mx-0 pt-4">
+        <div class="col-md-5 album_name_artist pl-4 pr-2">
           <h4><%= @support.album.name %></h4>
           <h5><%= link_to @support.album.artist_name, @support.album.artist,
             class: "text-white" %></h5>
         </div>
 
-        <div class="col-md-6 text-gray-600 pt-4">
+        <div class="col-md-4 text-gray-600 px-2">
           <h6><%== t ".categories", categories: join_categories_with_link(@support
             .album.categories, "text-gray-600") %></h6>
           <h6><%= t ".release", year: @support.album.year %></h6>
+        </div>
+
+        <div class="col-md-3 px-2">
+          <%= rating_for @support.album, Settings.album.rateable,
+            disable_after_rate: false, cancel_place: "right" %>
         </div>
       </div>
 

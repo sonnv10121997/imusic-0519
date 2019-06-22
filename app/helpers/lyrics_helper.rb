@@ -12,7 +12,7 @@ module LyricsHelper
     t "tracks.show.contributor", user: approved_lyric.user_name
   end
 
-  def lyric_helper approved_lyric
-    approved_lyric.content ||= content_tag :h5, t(".no_lyrics")
+  def lyric_helper content
+    content ||= content_tag :h5, t(".no_lyrics")
   end
 end

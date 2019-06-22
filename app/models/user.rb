@@ -3,6 +3,8 @@ class User < ApplicationRecord
     #{Settings.omniauth.google_oauth2}).freeze
   USER_PARAMS = %i(name email password confirmed_at).freeze
 
+  ratyrate_rater
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :validatable, :confirmable, :omniauthable,
     omniauth_providers: OMNIAUTH_PROVIDERS.map(&:to_sym)

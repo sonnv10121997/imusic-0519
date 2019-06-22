@@ -2,9 +2,11 @@
 //= require i18n.js
 //= require i18n/translations
 //= require jquery3
-//= require sb-admin-2
 //= require popper
 //= require bootstrap
+//= require jquery.raty
+//= require ratyrate
+//= require sb-admin-2
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

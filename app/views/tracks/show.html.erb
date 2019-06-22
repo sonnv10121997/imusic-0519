@@ -7,8 +7,10 @@
     </div>
 
     <div class="col-md-9 px-0 album_info">
-      <div class="row mx-0 px-4 pt-3 text-white">
+      <div class="row mx-0 px-4 pt-3 text-white d-flex justify-content-between">
         <small><%= @support.track.year %></small>
+        <%= rating_for @support.track, Settings.track.rateable,
+          disable_after_rate: false, cancel_place: "right" %>
       </div>
       <div class="row mx-0 px-4 text-white">
         <h4><%= @support.track.title %></h4>
@@ -40,14 +42,14 @@
       <h4 class="pb-3"><%= t ".lyrics" %></h4>
       <div class="pb-3 text-gray-600">
         <%== contributor_helper @support.track.approved_lyric %></div>
-      <div><%= simple_format lyric_helper(@support.track.approved_lyric) %></div>
+      <div><%= simple_format lyric_helper(@support.track.approved_lyric&.content) %></div>
       <hr class="my-4">
 
       <h4 class="mb-4"><%= t ".total_comment", count: number_with_delimiter(@support
         .track.comments.size) %></h4>
       <div class="d-flex">
-        <%= rescue_user_avatar current_user.avatar, "user_thumbnail img-fluid", "4x" %>
         <% if user_signed_in? %>
+          <%= rescue_user_avatar current_user.avatar, "user_thumbnail img-fluid", "4x" %>
           <%= render "comments/form", comment: @support.build_comments,
             track: @support.track %>
         <% end %>
