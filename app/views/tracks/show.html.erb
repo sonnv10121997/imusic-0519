@@ -26,15 +26,24 @@
             class: "text-gray-600" %>
         </h6>
       </div>
-      <div class="row mx-0 px-4 text-gray-600">
+      <div class="row mx-0 px-4 text-gray-600 d-flex justify-content-between">
         <h6><%== t ".categories", categories: join_categories_with_link(@support
           .track.album.categories, "text-gray-600") %></h6>
+        <div>
+          <%= fa_icon "play" %>
+          <%= number_with_delimiter @support.track.play_count %>
+          <span class="ml-3"></span>
+          <%= fa_icon "eye" %>
+          <%= number_with_delimiter @support.track.views_count %>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="audio_player offset-md-3">
-    <%= rescue_audio @support.track.data, "w-full d-block" %>
+    <%= rescue_audio @support.track.data, "w-full d-block", "audio_player" %>
+    <%= hidden_field_tag :track_id, @support.track.id %>
+    <%= hidden_field_tag :album_id, @support.track.album_id %>
   </div><hr class="mt-5 mb-4">
 
   <div class="row">

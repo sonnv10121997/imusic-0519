@@ -3,6 +3,7 @@ class AlbumsController < ApplicationController
 
   def show
     @support = Supports::Album.new album, params
+    album.increment! :views_count
   end
 
   private

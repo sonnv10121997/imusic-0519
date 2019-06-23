@@ -3,6 +3,7 @@ class TracksController < ApplicationController
 
   def show
     @support = Supports::Track.new track, params
+    track.increment! :views_count
   end
 
   private

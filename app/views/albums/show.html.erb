@@ -8,7 +8,7 @@
 
     <div class="album_info col-md-6 px-0">
       <div class="row mx-0 pt-4">
-        <div class="col-md-5 album_name_artist pl-4 pr-2">
+        <div class="col-md-5 album_name_artist pl-4 pr-0">
           <h4><%= @support.album.name %></h4>
           <h5><%= link_to @support.album.artist_name, @support.album.artist,
             class: "text-white" %></h5>
@@ -20,9 +20,17 @@
           <h6><%= t ".release", year: @support.album.year %></h6>
         </div>
 
-        <div class="col-md-3 px-2">
+        <div class="col-md-3 px-0">
           <%= rating_for @support.album, Settings.album.rateable,
             disable_after_rate: false, cancel_place: "right" %>
+          <div class="text-white-50">
+            <%= fa_icon "play" %>
+            <%= number_with_delimiter @support.album.play_count %>
+          </div>
+          <div class="text-white-50">
+            <%= fa_icon "eye" %>
+            <%= number_with_delimiter @support.album.views_count %>
+          </div>
         </div>
       </div>
 
@@ -51,6 +59,8 @@
   <div class="audio_player offset-6 px-0">
     <%= rescue_audio @support.album_tracks.first.data, "w-full d-block",
       "audio_player" %>
+    <%= hidden_field_tag :track_id, @support.album_tracks.first.id %>
+    <%= hidden_field_tag :album_id, @support.album.id %>
   </div>
 
   <div class="row py-4 justify-content-center">
