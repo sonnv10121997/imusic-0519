@@ -1,0 +1,11 @@
+<div class="container"><br>
+  <h3 class="my-4"><%= t ".albums" %></h3>
+  <div class="row">
+    <%= render @support.find_favourites_for current_user, Album.name %>
+  </div>
+
+  <h3 class="my-4"><%= t ".tracks" %></h3>
+  <div class="row">
+    <%= render @support.find_favourites_for current_user, Track.name %>
+  </div>
+</div>

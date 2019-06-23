@@ -26,4 +26,9 @@ class Supports::HomePage
     return model.constantize.latest.limit limit if limit
     model.constantize.latest.page(params[:page]).per Settings.track.list
   end
+
+  def find_favourites_for user, model
+    user.favourites.where(favourable_type: model).page(params[:page])
+      .per Settings.favourite.list
+  end
 end

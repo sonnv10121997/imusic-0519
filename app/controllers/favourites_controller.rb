@@ -1,4 +1,8 @@
 class FavouritesController < ApplicationController
+  def index
+    @support = Supports::HomePage.new params
+  end
+
   def create
     favourite =
       current_user.favourites.build favourable_id: favourite_params[:favourable_id],

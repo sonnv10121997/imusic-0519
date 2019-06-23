@@ -65,6 +65,8 @@ artist:
     max_size: 1
 lyric:
   featured_list: 4
+favourite:
+  list: 12
 min_friendly_token: 0
 max_friendly_token: 20
 omniauth:

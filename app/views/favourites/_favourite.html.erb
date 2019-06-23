@@ -1,0 +1,7 @@
+<% if favourite.favourable.is_a? Album %>
+  <%= render "albums/album", album: favourite.favourable %>
+<% elsif favourite.favourable.is_a? Track %>
+  <div class="col-md-4">
+    <%= render "tracks/track", track: favourite.favourable %>
+  </div>
+<% end %>
