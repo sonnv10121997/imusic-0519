@@ -4,6 +4,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require sweetalert2/dist/sweetalert2.all.min.js
 //= require jquery.raty
 //= require ratyrate
 //= require sb-admin-2

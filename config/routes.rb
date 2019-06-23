@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :artists, only: %i(index show)
     resources :albums, only: :show
     resources :tracks, only: :show
+    post "/favourites", to: "favourites#create"
+    delete "/favourites", to: "favourites#destroy"
     post "/play", to: "hit#play"
     post "/rate", to: "rater#create", as: "rate"
     root "home_page#index"

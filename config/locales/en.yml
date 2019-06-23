@@ -1,4 +1,9 @@
 en:
+  swal:
+    success:
+      favourite_added: Added to favourite list!
+      favourite_removed: Removed from favourite list!
+    ok: Ok
   admin:
     resource:
       not_found: Resource not found!

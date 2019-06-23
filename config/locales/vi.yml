@@ -1,4 +1,9 @@
 vi:
+  swal:
+    success:
+      favourite_added: Đã thêm vào danh sách yêu thích!
+      favourite_removed: Đã xóa khỏi danh sách yêu thích!
+    ok: Ok
   admin:
     resource:
       not_found: Không tìm thấy tài nguyên!

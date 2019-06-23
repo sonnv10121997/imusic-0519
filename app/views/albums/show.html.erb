@@ -31,6 +31,17 @@
             <%= fa_icon "eye" %>
             <%= number_with_delimiter @support.album.views_count %>
           </div>
+
+          <div id="favourability">
+            <% if favourited? @support.album %>
+              <%= render "favourites/remove_favourite" %>
+            <% else %>
+              <%= render "favourites/add_favourite" %>
+            <% end %>
+          </div>
+
+          <%= hidden_field_tag :favourable_id, @support.album.id %>
+          <%= hidden_field_tag :favourable_type, @support.album.class.name %>
         </div>
       </div>
 

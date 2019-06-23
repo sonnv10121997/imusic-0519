@@ -22,4 +22,9 @@ module ApplicationHelper
   def hot_albums_tracks_size
     hot_album_ids.size + hot_track_ids.size
   end
+
+  def favourited? favourite
+    return false unless user_signed_in?
+    current_user.favourites.include? favourite.favourite
+  end
 end

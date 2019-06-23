@@ -6,9 +6,9 @@ class Album < ApplicationRecord
   belongs_to :artist
 
   has_many :category_albums, dependent: :destroy
-  has_many :favourites, as: :favourable
   has_many :categories, through: :category_albums
   has_many :tracks
+  has_one :favourite, as: :favourable, dependent: :destroy
   has_one_attached :cover
 
   delegate :name, to: :artist, prefix: true

@@ -142,3 +142,7 @@ hr.hide_last_child:last-child {
 .h-56px {
   height: 56px;
 }
+
+#add_favourite, #remove_favourite {
+  cursor: pointer;
+}

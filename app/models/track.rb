@@ -6,9 +6,9 @@ class Track < ApplicationRecord
   belongs_to :artist
   belongs_to :album
 
-  has_many :favourites, as: :favourable, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :lyrics, dependent: :destroy
+  has_one :favourite, as: :favourable, dependent: :destroy
   has_one :approved_lyric, ->{where approved: true}, dependent: :destroy,
     class_name: Lyric.name, foreign_key: :track_id
   has_one_attached :cover

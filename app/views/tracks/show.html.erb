@@ -12,8 +12,19 @@
         <%= rating_for @support.track, Settings.track.rateable,
           disable_after_rate: false, cancel_place: "right" %>
       </div>
-      <div class="row mx-0 px-4 text-white">
+      <div class="row mx-0 px-4 text-white d-flex justify-content-between">
         <h4><%= @support.track.title %></h4>
+
+        <div id="favourability">
+          <% if favourited? @support.track %>
+            <%= render "favourites/remove_favourite" %>
+          <% else %>
+            <%= render "favourites/add_favourite" %>
+          <% end %>
+        </div>
+
+        <%= hidden_field_tag :favourable_id, @support.track.id %>
+        <%= hidden_field_tag :favourable_type, @support.track.class.name %>
       </div>
       <div class="row mx-0 px-4 pb-2">
         <h6><%= link_to @support.track.artist_name, @support.track.artist,
