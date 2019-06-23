@@ -19,7 +19,7 @@ $(document).on('turbolinks:load', function () {
       title: I18n.t(`swal.success.favourite_added`),
       type: `success`, showCancelButton: false,
       confirmButtonText: I18n.t(`swal.ok`)
-    })
+    });
   });
 
   $(document).on('click', '#remove_favourite', function () {
@@ -42,6 +42,6 @@ $(document).on('turbolinks:load', function () {
       title: I18n.t(`swal.success.favourite_removed`),
       type: `success`, showCancelButton: false,
       confirmButtonText: I18n.t(`swal.ok`)
-    })
+    });
   });
 });

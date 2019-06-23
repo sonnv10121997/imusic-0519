@@ -3,7 +3,7 @@ vi:
     success:
       favourite_added: Đã thêm vào danh sách yêu thích!
       favourite_removed: Đã xóa khỏi danh sách yêu thích!
-    ok: Ok
+    ok: OK
   admin:
     resource:
       not_found: Không tìm thấy tài nguyên!
@@ -183,6 +183,17 @@ vi:
       lyrics: Lời bài hát
       tracks: Bài hát
       users: Người dùng
+  favourites:
+    index:
+      no_favourites: Bạn chưa có bài hát hoặc album yêu thích nào!
+      albums: Albums
+      tracks: Bài hát
+  searches:
+    index:
+      no_result: Không có kết quả!
+      track: Bài hát
+      album: Album
+      artist: Nghệ sĩ
   comments:
     comment_data:
       edit: Sửa
@@ -254,6 +265,7 @@ vi:
       log_in: Đăng nhập
       sign_up: Đăng kí
       admin_page: Trang quản trị
+      search: Tìm kiếm bài hát, album, nghệ sĩ
     footer:
       copyright_html: "&copy; Bản quyền thuộc về IMusic 2019"
   errors:

@@ -31,4 +31,8 @@ class Supports::HomePage
     user.favourites.where(favourable_type: model).page(params[:page])
       .per Settings.favourite.list
   end
+
+  def user_favourites user
+    user.favourites
+  end
 end

@@ -1,11 +1,21 @@
 <div class="container"><br>
-  <h3 class="my-4"><%= t ".albums" %></h3>
-  <div class="row">
-    <%= render @support.find_favourites_for current_user, Album.name %>
-  </div>
+  <% if @support.user_favourites(current_user).empty? %>
+    <h3><%= t ".no_favourites" %></h3>
+  <% else %>
+    <% if not @support.find_favourites_for(current_user, Album.name).empty? %>
+      <h3 class="my-4"><%= t ".albums" %></h3>
+      <div class="row">
+        <%= render @support.find_favourites_for current_user, Album.name %>
+        <%= paginate @support.find_favourites_for current_user, Album.name %>
+      </div>
+    <% end %>
 
-  <h3 class="my-4"><%= t ".tracks" %></h3>
-  <div class="row">
-    <%= render @support.find_favourites_for current_user, Track.name %>
-  </div>
+    <% if not @support.find_favourites_for(current_user, Track.name).empty? %>
+      <h3 class="my-4"><%= t ".tracks" %></h3>
+      <div class="row">
+        <%= render @support.find_favourites_for current_user, Track.name %>
+        <%= paginate @support.find_favourites_for current_user, Track.name %>
+      </div>
+    <% end %>
+  <% end %>
 </div>

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :albums, only: :show
     resources :tracks, only: :show
     resources :favourites, only: :index
+    get "searches/index"
     post "/favourites", to: "favourites#create"
     delete "/favourites", to: "favourites#destroy"
     post "/play", to: "hit#play"

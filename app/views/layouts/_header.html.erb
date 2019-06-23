@@ -1,6 +1,17 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top h-56px">
   <div class="container">
     <%= link_to Settings.application.title, root_path, class: "navbar-brand" %>
+
+    <div class="search-box offset-md-2">
+      <%= form_tag searches_index_path, method: :get, class: "search-form" do  %>
+        <%= text_field_tag :q, params[:q], autocomplete: :off, required: true,
+          class: "form-control h-31px", placeholder: t(".search") %>
+        <%= button_tag type: :submit, class: "btn search-btn" do %>
+          <%= fa_icon "search" %>
+        <% end %>
+      <% end %>
+    </div>
+
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
         <li><%= link_to t(".categories"), categories_path, class: "nav-link" %></li>

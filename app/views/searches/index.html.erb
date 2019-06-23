@@ -1,0 +1,23 @@
+<div class="container"><br>
+  <% if @support.items.empty? %>
+    <h3><%= t ".no_result" %></h3>
+  <% else %>
+    <% if not @support.paginate_tracks.empty? %>
+      <h4 class="my-4"><%= t ".track" %></h4>
+      <%= render @support.paginate_tracks %>
+      <%= paginate @support.paginate_tracks %>
+    <% end %>
+
+    <% if not @support.paginate_albums.empty? %>
+      <h4 class="my-4"><%= t ".album" %></h4>
+      <%= render @support.paginate_albums %>
+      <%= paginate @support.paginate_tracks %>
+    <% end %>
+
+    <% if not @support.paginate_artists.empty? %>
+      <h4 class="my-4"><%= t ".artist" %></h4>
+      <%= render @support.paginate_artists %>
+      <%= paginate @support.paginate_tracks %>
+    <% end %>
+  <% end %>
+</div>
