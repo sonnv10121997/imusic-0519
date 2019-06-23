@@ -14,7 +14,8 @@ class Supports::Track
     track.comments.latest.page(params[:page]).per Settings.comment.list
   end
 
-  def latest_tracks
-    Track.latest_with_limit Settings.track.list
+  def latest_tracks limit = nil
+    return Track.latest.limit limit if limit
+    Track.latest.page(params[:page]).per Settings.track.list
   end
 end

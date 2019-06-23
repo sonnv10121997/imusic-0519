@@ -17,7 +17,7 @@ comment:
 track:
   list: 8
   small_list: 4
-  featured_list: 3
+  featured_list: 5
   title:
     max_length: 30
   year:

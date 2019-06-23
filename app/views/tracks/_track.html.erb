@@ -9,7 +9,15 @@
     <small class="music-published-date"><%= track.year %></small>
     <h6 class="no_margin"><%= link_to track.title, track,
       class: "text-gray-900" %></h6>
-    <small><%= link_to track.artist_name, track.artist,
-      class: "text-gray-900" %></small>
+    <small>
+      <%= link_to track.artist_name, track.artist, class: "text-gray-900" %>
+      <div class="float-right">
+        <%= fa_icon "play" %>
+        <%= number_with_delimiter track.play_count %>
+        <span class="ml-3"></span>
+        <%= fa_icon "eye" %>
+        <%= number_with_delimiter track.views_count %>
+      </div>
+    </small>
   </div>
-</div>
+</div><hr class="hide_last_child">

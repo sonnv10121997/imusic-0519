@@ -3,8 +3,6 @@
     <%= link_to Settings.application.title, root_path, class: "navbar-brand" %>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto">
-        <li><%= link_to t(".hot"), "#", class: "nav-link" %></li>
-        <li><%= link_to t(".top"), "#", class: "nav-link" %></li>
         <li><%= link_to t(".categories"), categories_path, class: "nav-link" %></li>
         <li><%= link_to t(".artists"), artists_path, class: "nav-link" %></li>
         <% if user_signed_in? %>

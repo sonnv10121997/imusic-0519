@@ -28,5 +28,6 @@ class Track < ApplicationRecord
   validates :data, attached: true, content_type: Settings.track.data.file_type,
     size: {less_than: Settings.track.data.max_size.megabytes}
 
-  scope :latest_with_limit, ->(limit) {order(created_at: :desc).limit limit}
+  scope :latest, ->{order created_at: :desc}
+  scope :top, ->{order play_count: :desc}
 end

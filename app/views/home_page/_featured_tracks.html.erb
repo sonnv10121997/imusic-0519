@@ -1,77 +1,29 @@
 <h3 class="my-4"><%= t ".tracks" %></h3>
+
 <div class="row">
   <div class="col-lg-4 mb-4">
     <div class="card h-100">
       <h4 class="card-header"><%= t ".hot" %></h4>
       <div class="card-body">
-        <% Settings.track.featured_list.times do %>
-          <div class="track">
-            <div class="track_info">
-              <div class="album_thumbnail"><%= image_tag "default-album.jpg" %></div>
-              <div class="track_metadata">
-                <small class="music-published-date">December 9, 2018</small>
-                <h6 class="no_margin">Episode 203 - The Last Blockbuster</h6>
-                <small>By <%= link_to "Artist", "#" %></small>
-              </div>
-            </div>
-
-            <%= audio_tag "dummy-audio.mp3", controls: true, preload: "auto",
-              class: "w-full" %>
-          </div><hr class="hide_last_child">
-        <% end %>
-      </div>
-      <div class="card-footer center_text">
-        <a href="#" class="btn btn-primary"><%= t ".see_more" %></a>
+        <%= render support.find_hot(Track.name).take Settings.track.featured_list %>
       </div>
     </div>
   </div>
+
   <div class="col-lg-4 mb-4">
     <div class="card h-100">
       <h4 class="card-header"><%= t ".top" %></h4>
       <div class="card-body">
-        <% Settings.track.featured_list.times do %>
-          <div class="track">
-            <div class="track_info">
-              <div class="album_thumbnail"><%= image_tag "default-album.jpg" %></div>
-              <div class="track_metadata">
-                <small class="music-published-date">December 9, 2018</small>
-                <h6 class="no_margin">Episode 203 - The Last Blockbuster</h6>
-                <small>By <%= link_to "Artist", "#" %></small>
-              </div>
-            </div>
-
-            <%= audio_tag "dummy-audio.mp3", controls: true, preload: "auto",
-              class: "w-full" %>
-          </div><hr class="hide_last_child">
-        <% end %>
-      </div>
-      <div class="card-footer center_text">
-        <a href="#" class="btn btn-primary"><%= t ".see_more" %></a>
+        <%= render support.find_top Track.name, Settings.track.featured_list %>
       </div>
     </div>
   </div>
+
   <div class="col-lg-4 mb-4">
     <div class="card h-100">
       <h4 class="card-header"><%= t ".latest" %></h4>
       <div class="card-body">
-        <% Settings.track.featured_list.times do %>
-          <div class="track">
-            <div class="track_info">
-              <div class="album_thumbnail"><%= image_tag "default-album.jpg" %></div>
-              <div class="track_metadata">
-                <small class="music-published-date">December 9, 2018</small>
-                <h6 class="no_margin">Episode 203 - The Last Blockbuster</h6>
-                <small>By <%= link_to "Artist", "#" %></small>
-              </div>
-            </div>
-
-            <%= audio_tag "dummy-audio.mp3", controls: true, preload: "auto",
-              class: "w-full" %>
-          </div><hr class="hide_last_child">
-        <% end %>
-      </div>
-      <div class="card-footer center_text">
-        <a href="#" class="btn btn-primary"><%= t ".see_more" %></a>
+        <%= render support.find_latest Track.name, Settings.track.featured_list %>
       </div>
     </div>
   </div>
